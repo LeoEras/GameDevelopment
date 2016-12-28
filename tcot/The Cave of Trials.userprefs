@@ -1,0 +1,20 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Warrior Scripts\PlayerHealth.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Warrior Scripts\GroundCheck.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Warrior Scripts\EXOController.cs" Line="7" Column="2" />
+      <File FileName="Assets\Scripts\Warrior Scripts\WallCheckL.cs" Line="7" Column="2" />
+      <File FileName="Assets\Scripts\Warrior Scripts\PlayerHealth.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\FallDamage.cs" Line="17" Column="2" />
+      <File FileName="Assets\Scripts\FollowPlayer.cs" Line="23" Column="18" />
+      <File FileName="Assets\Scripts\CameraBound.cs" Line="8" Column="51" />
+      <File FileName="Assets\Scripts\StoneFall.cs" Line="11" Column="30" />
+      <File FileName="Assets\Scripts\StoneDamageAndDestruction.cs" Line="12" Column="49" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

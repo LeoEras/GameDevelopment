@@ -1,0 +1,792 @@
+fileFormatVersion: 2
+guid: ff2b37781d4b4254facee694b925494d
+timeCreated: 1480465123
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BOV_Warrior_0
+    21300002: BOV_Warrior_1
+    21300004: BOV_Warrior_2
+    21300006: BOV_Warrior_3
+    21300008: BOV_Warrior_4
+    21300010: BOV_Warrior_5
+    21300012: BOV_Warrior_6
+    21300014: BOV_Warrior_7
+    21300016: BOV_Warrior_8
+    21300018: BOV_Warrior_9
+    21300020: BOV_Warrior_10
+    21300022: BOV_Warrior_11
+    21300024: BOV_Warrior_12
+    21300026: BOV_Warrior_13
+    21300028: BOV_Warrior_14
+    21300030: BOV_Warrior_15
+    21300032: BOV_Warrior_16
+    21300034: BOV_Warrior_17
+    21300036: BOV_Warrior_18
+    21300038: BOV_Warrior_19
+    21300040: BOV_Warrior_20
+    21300042: BOV_Warrior_21
+    21300044: BOV_Warrior_22
+    21300046: BOV_Warrior_23
+    21300048: BOV_Warrior_24
+    21300050: BOV_Warrior_25
+    21300052: BOV_Warrior_26
+    21300054: BOV_Warrior_27
+    21300056: BOV_Warrior_28
+    21300058: BOV_Warrior_29
+    21300060: BOV_Warrior_30
+    21300062: BOV_Warrior_31
+    21300064: BOV_Warrior_32
+    21300066: BOV_Warrior_33
+    21300068: BOV_Warrior_34
+    21300070: BOV_Warrior_35
+    21300072: BOV_Warrior_36
+    21300074: BOV_Warrior_37
+    21300076: BOV_Warrior_38
+    21300078: BOV_Warrior_39
+    21300080: BOV_Warrior_40
+    21300082: BOV_Warrior_41
+    21300084: BOV_Warrior_42
+    21300086: BOV_Warrior_43
+    21300088: BOV_Warrior_44
+    21300090: BOV_Warrior_45
+    21300092: BOV_Warrior_46
+    21300094: BOV_Warrior_47
+    21300096: BOV_Warrior_48
+    21300098: BOV_Warrior_49
+    21300100: BOV_Warrior_50
+    21300102: BOV_Warrior_51
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 61
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: Standalone
+    maxTextureSize: 1024
+    textureFormat: -3
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BOV_Warrior_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 402
+        width: 43
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 402
+        width: 43
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 402
+        width: 43
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_3
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 402
+        width: 43
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 334
+        width: 37
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_5
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 334
+        width: 45
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_6
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 334
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_7
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 334
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 334
+        width: 38
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_9
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 334
+        width: 40
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_10
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 334
+        width: 44
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_11
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 334
+        width: 39
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_12
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 256
+        width: 52
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_13
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 255
+        width: 50
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_14
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 255
+        width: 64
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_15
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 255
+        width: 72
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_16
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 192
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_17
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 192
+        width: 46
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_18
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 192
+        width: 72
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_19
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 192
+        width: 74
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_20
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 105
+        width: 40
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_21
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 106
+        width: 45
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_22
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 113
+        width: 44
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_23
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 112
+        width: 63
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_24
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 17
+        width: 106
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_25
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 63
+        width: 39
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_26
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 63
+        width: 30
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_27
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 65
+        width: 23
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_28
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 65
+        width: 35
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_29
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 65
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_30
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 49
+        width: 96
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_31
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 49
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_32
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 51
+        width: 38
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_33
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 51
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_34
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 16
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_35
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 37
+        width: 25
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_36
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 37
+        width: 25
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_37
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 37
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_38
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 35
+        width: 23
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_39
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 37
+        width: 25
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_40
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_41
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1
+        width: 23
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_42
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 22
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_43
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 22
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_44
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 13
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_45
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 13
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_46
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 13
+        width: 14
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_47
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 13
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_48
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 4
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_49
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 4
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_50
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 4
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BOV_Warrior_51
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 4
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
