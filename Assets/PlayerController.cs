@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour {
 			animator.SetBool ("is_moving", false);
 		}
 
+		transform.rotation = Quaternion.Euler(0, 0, 0);
 		transform.Translate (Input.GetAxisRaw ("Horizontal") * speed,
 			Input.GetAxisRaw ("Vertical") * speed, 0);
 	}
