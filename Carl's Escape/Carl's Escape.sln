@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{2920113B-8F59-5467-C3E4-2859DEC9BF12}") = "Carl's Escape", "Assembly-CSharp.csproj", "{BD830776-B223-4CF5-FE0F-3898097969AF}"
+EndProject
+Project("{2920113B-8F59-5467-C3E4-2859DEC9BF12}") = "Carl's Escape", "Assembly-CSharp-Editor.csproj", "{65E64740-37A9-F0AA-2DC0-B38E725757E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD830776-B223-4CF5-FE0F-3898097969AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD830776-B223-4CF5-FE0F-3898097969AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD830776-B223-4CF5-FE0F-3898097969AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD830776-B223-4CF5-FE0F-3898097969AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65E64740-37A9-F0AA-2DC0-B38E725757E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65E64740-37A9-F0AA-2DC0-B38E725757E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65E64740-37A9-F0AA-2DC0-B38E725757E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65E64740-37A9-F0AA-2DC0-B38E725757E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
