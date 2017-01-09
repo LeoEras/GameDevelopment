@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour {
 	public float speed;
 	public int facing_direction;
 	private Animator animator;
+	public GameObject camera;
 
 	// Use this for initialization
 	void Start()
@@ -44,5 +45,8 @@ public class PlayerController : MonoBehaviour {
 		transform.rotation = Quaternion.Euler(0, 0, 0);
 		transform.Translate (Input.GetAxisRaw ("Horizontal") * speed,
 			Input.GetAxisRaw ("Vertical") * speed, 0);
+
+		camera.transform.position = new Vector3(this.transform.position.x,
+			this.transform.position.y, -10);
 	}
 }
