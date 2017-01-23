@@ -51,66 +51,67 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		anim.SetBool ("Grounded", grounded);
+		if (Time.timeScale == 1f) {
+			anim.SetBool ("Grounded", grounded);
 
-		if (Input.GetKeyDown (KeyCode.Space) && grounded)
-		{
-			rb.velocity = new Vector2(rb.velocity.x, jumpHeight); 
-			anim.SetBool ("Hurt", false);
-		}
-
-		moveVelocity = 0f;
-
-		if (Input.GetKey(KeyCode.D))
-		{
-			//rb.velocity = new Vector2(moveSpeed, rb.velocity.y); 
-			anim.SetBool ("Hurt", false);
-			moveVelocity = moveSpeed;
-		}
-
-		if (Input.GetKey(KeyCode.A))
-		{
-			//rb.velocity = new Vector2(-moveSpeed, rb.velocity.y); 
-			anim.SetBool ("Hurt", false);
-			moveVelocity = -moveSpeed;
-		}
-
-		if (knockbackCount <= 0) {
-			rb.velocity = new Vector2 (moveVelocity, rb.velocity.y);
-		} else {
-			if (knockFromRight) {
-				rb.velocity = new Vector2 (-knockback, rb.velocity.y);
+			if (Input.GetKeyDown (KeyCode.Space) && grounded)
+			{
+				rb.velocity = new Vector2(rb.velocity.x, jumpHeight); 
+				anim.SetBool ("Hurt", false);
 			}
-			if (!knockFromRight) {
-				rb.velocity = new Vector2 (knockback, rb.velocity.y);
+
+			moveVelocity = 0f;
+
+			if (Input.GetKey(KeyCode.D))
+			{
+				//rb.velocity = new Vector2(moveSpeed, rb.velocity.y); 
+				anim.SetBool ("Hurt", false);
+				moveVelocity = moveSpeed;
 			}
-			knockbackCount -= Time.deltaTime;
-		}
 
-		anim.SetFloat ("Speed", Mathf.Abs(rb.velocity.x)); 
+			if (Input.GetKey(KeyCode.A))
+			{
+				//rb.velocity = new Vector2(-moveSpeed, rb.velocity.y); 
+				anim.SetBool ("Hurt", false);
+				moveVelocity = -moveSpeed;
+			}
 
-		if (rb.velocity.x > 0) {
-			transform.localScale = new Vector3 (1f, 1f, 1f);
-		} else if (rb.velocity.x < 0) {
-			transform.localScale = new Vector3 (-1f, 1f, 1f);
-		}
-		if ((Input.GetKeyDown (KeyCode.Return) || Input.GetMouseButtonDown (0)) && enableShooting) {
-			anim.SetBool ("Hurt", false);
-			anim.SetBool ("Shooting", true);
-			Instantiate (shootingObjet, firePoint.position, firePoint.rotation);
-			shotDelayCounter = shotDelay;
-		} else if ((Input.GetKey (KeyCode.Return) || Input.GetMouseButton (0)) && enableShooting) {
-			anim.SetBool ("Hurt", false);
-			anim.SetBool ("Shooting", true);
-			shotDelayCounter -= Time.deltaTime;
-			if (shotDelayCounter <= 0) {
-				shotDelayCounter = shotDelay;
+			if (knockbackCount <= 0) {
+				rb.velocity = new Vector2 (moveVelocity, rb.velocity.y);
+			} else {
+				if (knockFromRight) {
+					rb.velocity = new Vector2 (-knockback, rb.velocity.y);
+				}
+				if (!knockFromRight) {
+					rb.velocity = new Vector2 (knockback, rb.velocity.y);
+				}
+				knockbackCount -= Time.deltaTime;
+			}
+
+			anim.SetFloat ("Speed", Mathf.Abs(rb.velocity.x)); 
+
+			if (rb.velocity.x > 0) {
+				transform.localScale = new Vector3 (1f, 1f, 1f);
+			} else if (rb.velocity.x < 0) {
+				transform.localScale = new Vector3 (-1f, 1f, 1f);
+			}
+			if ((Input.GetKeyDown (KeyCode.Return) || Input.GetMouseButtonDown (0)) && enableShooting) {
+				anim.SetBool ("Hurt", false);
+				anim.SetBool ("Shooting", true);
 				Instantiate (shootingObjet, firePoint.position, firePoint.rotation);
+				shotDelayCounter = shotDelay;
+			} else if ((Input.GetKey (KeyCode.Return) || Input.GetMouseButton (0)) && enableShooting) {
+				anim.SetBool ("Hurt", false);
+				anim.SetBool ("Shooting", true);
+				shotDelayCounter -= Time.deltaTime;
+				if (shotDelayCounter <= 0) {
+					shotDelayCounter = shotDelay;
+					Instantiate (shootingObjet, firePoint.position, firePoint.rotation);
+				}
+			} else {
+				anim.SetBool ("Shooting", false);
 			}
-		} else {
-			anim.SetBool ("Shooting", false);
 		}
-		 
 	}
 
 	void OnTriggerStay2D (Collider2D other) {

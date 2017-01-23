@@ -27,7 +27,7 @@ GameObject:
   - 95: {fileID: 95000011130774088}
   - 114: {fileID: 114000010945679630}
   - 114: {fileID: 114000011692169336}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Monster
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013372598858}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: -6039275892498968547, guid: 0000000000000000d000000000000000, type: 0}
@@ -57,7 +57,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012744708984}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: EdgeCheck
   m_TagString: Untagged
   m_Icon: {fileID: -5430335037324417643, guid: 0000000000000000d000000000000000, type: 0}
@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011887622540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.3486, y: -1.8036, z: 0}
+  m_LocalPosition: {x: 8.16, y: -1.8036, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -179,9 +179,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 30
+  pointsOnDeath: 10
   deathEffect: {fileID: 1000011699851130, guid: 07546694ba88bfc4a9c81ec911e68281,
     type: 2}
-  pointsOnDeath: 10
+  items:
+  - {fileID: 1000011834834730, guid: 23fee64e6bcb8534baf8c9f289300b7d, type: 2}
+  - {fileID: 1000010704637312, guid: ea8d909321fc5db408b0cff697553c34, type: 2}
+  - {fileID: 1000011340752854, guid: 8263def6bfaa578448fdc418a1354ff3, type: 2}
+  itemDropRates: 010000000f000000190000003b000000
 --- !u!114 &114000011692169336
 MonoBehaviour:
   m_ObjectHideFlags: 1

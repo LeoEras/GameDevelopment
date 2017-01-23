@@ -741,6 +741,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startLevel: Stage1
   levelSelect: StageSelect
+  playerLives: 3
+  playerHealth: 100
 --- !u!1 &1149289887
 GameObject:
   m_ObjectHideFlags: 0

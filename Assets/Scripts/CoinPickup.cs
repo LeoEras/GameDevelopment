@@ -10,7 +10,6 @@ public class CoinPickup : MonoBehaviour {
 			return;
 		AudioManager.Main.PlayNewSound ("coin");
 		ScoreManager.AddPoints (pointsToAdd);
-		LevelManager.CrystalPicked ();
 		Destroy (gameObject);
 	}
 }
