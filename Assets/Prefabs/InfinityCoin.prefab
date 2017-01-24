@@ -11,6 +11,24 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1000011061201044}
   m_IsPrefabParent: 1
+--- !u!1 &1000010864746618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011138392294}
+  - 114: {fileID: 114000010778194484}
+  - 58: {fileID: 58000011831727388}
+  - 60: {fileID: 60000010580839074}
+  m_Layer: 13
+  m_Name: FireParticles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000011061201044
 GameObject:
   m_ObjectHideFlags: 0
@@ -22,8 +40,7 @@ GameObject:
   - 212: {fileID: 212000012487188946}
   - 95: {fileID: 95000011594568886}
   - 58: {fileID: 58000010103892420}
-  - 114: {fileID: 114000010585450568}
-  - 114: {fileID: 114000013915765936}
+  - 114: {fileID: 114000014179401508}
   m_Layer: 13
   m_Name: InfinityCoin
   m_TagString: Untagged
@@ -31,6 +48,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4000011138392294
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010864746618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000013160631438}
+  m_RootOrder: 0
 --- !u!4 &4000013160631438
 Transform:
   m_ObjectHideFlags: 1
@@ -38,10 +68,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011061201044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.19, y: 0.16, z: 0}
+  m_LocalPosition: {x: -0.13, y: -2.1936944, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 4000011138392294}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!58 &58000010103892420
@@ -57,7 +88,40 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.62
+  m_Radius: 0.21992588
+--- !u!58 &58000011831727388
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010864746618}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.21071878
+--- !u!60 &60000010580839074
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010864746618}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.014969595, y: 0.16169143}
+      - {x: 0.14268737, y: 0.07948041}
+      - {x: 0.113741755, y: -0.10543656}
+      - {x: -0.10875189, y: -0.10543656}
+      - {x: -0.13270772, y: 0.07449031}
 --- !u!95 &95000011594568886
 Animator:
   serializedVersion: 3
@@ -75,19 +139,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000010585450568
+--- !u!114 &114000010778194484
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011061201044}
+  m_GameObject: {fileID: 1000010864746618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd841ba82ec9ebc4f860d7b7c99d0586, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a1465d491728644a864ec780a90c54c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToAdd: 1000
---- !u!114 &114000013915765936
+  ParticlePrefab: {fileID: 1000013535339118, guid: 11f65caf6538db840b74a3038053250f,
+    type: 2}
+  Rate: 500
+--- !u!114 &114000014179401508
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -100,6 +166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infinityBeam: {fileID: 1000011151744698, guid: c15429e0a127b1e48b6c9fa225d4cc35,
     type: 2}
+  buffDuration: 10
+  infinityBuff: {fileID: 11400000, guid: d3f0b2aa85828004f99bfbe92f99ba03, type: 2}
 --- !u!212 &212000012487188946
 SpriteRenderer:
   m_ObjectHideFlags: 1

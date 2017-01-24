@@ -57,6 +57,7 @@ public class LevelManager : MonoBehaviour {
 		player.moveSpeed = defaultMoveSpeed;
 		player.shootingObjet = defaultBeam;
 		player.jumpHeight = defaultJumpHeight;
+		player.fireParticleEffect.SetActive (false);
 		player.GetComponent<Renderer>().enabled = true;
 		player.GetComponent<CircleCollider2D> ().enabled = true;
 		player.GetComponent<BoxCollider2D> ().enabled = true;

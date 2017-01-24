@@ -8,13 +8,18 @@ public class PlayerController : MonoBehaviour {
 	public float moveSpeed;
 	private float moveVelocity;
 	public float jumpHeight;
+	public int defaultMoveSpeed;
+	public int defaultJumpHeight;
+	public float defaultShotDelay;
 
 	public Transform groundCheck;
 	public float groundCheckRadius;
 	public LayerMask whatIsGround;
 	private bool grounded;
 
+	public GameObject fireParticleEffect;
 	public GameObject shootingObjet;
+	public GameObject defaultBeam;
 	public Transform firePoint;
 	public float shotDelay;
 	private float shotDelayCounter;
@@ -30,29 +35,46 @@ public class PlayerController : MonoBehaviour {
 	private bool enableShooting;
 	private bool enableMoving;
 
+	private bool debuffingInfinity;
+
 	private Rigidbody2D rb;
 	private Animator anim;
+
+	public InfinityBuff infinityBuff;
+	private BuffableEntity buffable;
 
 	void Awake () {
 		invinsible = false;
 		enableShooting = true;
 		enableMoving = true;
+		debuffingInfinity = false;
+		rb = GetComponent<Rigidbody2D>();
+		anim = GetComponent<Animator>();
 	}
 	// Use this for initialization
 	void Start () {
-		rb = GetComponent<Rigidbody2D>();
-		anim = GetComponent<Animator>();
+		buffable = FindObjectOfType<BuffableEntity> ();
+		levelManager = FindObjectOfType<LevelManager> ();
+		fireParticleEffect.SetActive (false);
+
 	}
 
 	void FixedUpdate () {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundCheckRadius, whatIsGround);
 	}
 
-	
 	// Update is called once per frame
 	void Update () {
 		if (Time.timeScale == 1f) {
 			anim.SetBool ("Grounded", grounded);
+
+			if (Input.GetKeyDown (KeyCode.G))
+			{
+				TimedInfinityBuff tif = (TimedInfinityBuff)infinityBuff.InitializeBuff (this);
+				buffable.AddBuff (tif);
+				/*TimedInfinityBuff buff = (TimedInfinityBuff)infinityBuff.InitializeBuff (this);
+				buff.Activate ();*/
+			}
 
 			if (Input.GetKeyDown (KeyCode.Space) && grounded)
 			{
