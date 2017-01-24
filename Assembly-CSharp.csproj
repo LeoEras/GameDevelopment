@@ -45,8 +45,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraBehaviour.cs" />
+     <Compile Include="Assets\ClockBehaviourScript.cs" />
+     <Compile Include="Assets\OptionsController.cs" />
      <Compile Include="Assets\Peluche_controller.cs" />
      <Compile Include="Assets\PlayerController.cs" />
+     <Compile Include="Assets\PropLayerBehaviour.cs" />
+     <Compile Include="Assets\WallBehaviour.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
