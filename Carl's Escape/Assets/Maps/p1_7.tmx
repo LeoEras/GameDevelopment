@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-down" width="14" height="14" tilewidth="16" tileheight="16" nextobjectid="20">
+ <properties>
+  <property name="unity:scale" type="float" value="0.0625"/>
+ </properties>
+ <tileset firstgid="1" name="minish_chip_dungeon_01" tilewidth="16" tileheight="16" tilecount="480" columns="30">
+  <image source="../Sprites/elements/minish_chip_dungeon_01.png" trans="010101" width="480" height="256"/>
+ </tileset>
+ <tileset firstgid="481" name="fd864d4887041a291e9888774441ad4e" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../Sprites/elements/fd864d4887041a291e9888774441ad4e.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="1505" name="Sayako_TileB" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../Sprites/elements/Sayako_TileB.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="2529" name="Inside_A2" tilewidth="16" tileheight="16" tilecount="768" columns="32">
+  <image source="../Sprites/elements/Inside_A2.png" width="512" height="384"/>
+ </tileset>
+ <tileset firstgid="3297" name="Inside_A4" tilewidth="16" tileheight="16" tilecount="960" columns="32">
+  <image source="../Sprites/elements/Inside_A4.png" width="512" height="480"/>
+ </tileset>
+ <tileset firstgid="4257" name="mvtileseticonsscifi1" tilewidth="16" tileheight="16" tilecount="704" columns="32">
+  <image source="../Sprites/elements/mvtileseticonsscifi1.png" width="512" height="352"/>
+ </tileset>
+ <layer name="piso" width="14" height="14">
+  <properties>
+   <property name="unity:sortingLayerName" value="Ground"/>
+  </properties>
+  <data encoding="csv">
+163,164,17,18,19,20,21,165,166,0,0,0,0,0,
+193,194,47,48,49,50,51,195,196,0,0,0,0,0,
+15,16,3734,3862,3734,3862,3862,43,44,0,0,0,0,0,
+0,178,3734,3862,3734,3734,3862,73,74,0,0,0,0,0,
+0,1610613180,3862,3734,3734,3862,3734,103,104,0,0,0,0,0,
+0,238,3734,3734,3862,3734,3862,373,374,0,0,0,0,0,
+135,136,3862,3734,3862,3734,3862,403,404,19,20,21,165,166,
+15,16,3862,3862,3734,3734,3862,433,434,49,50,51,195,196,
+45,46,3734,3862,3734,3734,3734,3734,3862,3862,3862,3862,43,44,
+75,76,3734,3734,3862,3862,3734,3862,3862,3734,3734,3862,73,74,
+105,106,3862,3862,3862,3862,3734,3862,3862,3734,3734,3862,103,104,
+135,136,3734,3862,3862,3734,3862,3862,3862,3862,3734,3862,133,134,
+223,224,77,78,79,80,81,77,78,79,80,81,225,226,
+253,254,107,108,109,110,111,107,108,109,110,111,255,256
+</data>
+ </layer>
+ <layer name="sobrePiso" width="14" height="14">
+  <properties>
+   <property name="unity:sortingLayerName" value="Ground"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,4857,4858,0,0,0,
+0,0,0,0,0,0,0,0,0,4889,4890,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="objetos" width="14" height="14">
+  <properties>
+   <property name="unity:sortingLayerName" value="Objects"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="sobrePlayer" width="14" height="14">
+  <properties>
+   <property name="unity:sortingLayerName" value="Player"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+45,0,0,0,0,0,0,0,0,0,0,0,0,0,
+75,0,0,0,0,0,0,0,0,0,0,0,0,0,
+105,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup name="collisions">
+  <object id="12" x="16.5" y="16.5" width="112" height="14.5"/>
+  <object id="13" x="112.5" y="17.5" width="15.5" height="109"/>
+  <object id="14" x="113" y="112.5" width="94.5" height="15.5"/>
+  <object id="15" x="192.5" y="113" width="15.5" height="95.5"/>
+  <object id="16" x="15.5" y="192.5" width="193.5" height="15.5"/>
+  <object id="17" x="-0.5" y="86" width="31.5" height="122"/>
+  <object id="18" x="0" y="18.5" width="31.5" height="39"/>
+  <object id="19" x="175" y="144">
+   <polyline points="0,0 0.5,31.5 -31,31.5 0,18"/>
+  </object>
+ </objectgroup>
+</map>
