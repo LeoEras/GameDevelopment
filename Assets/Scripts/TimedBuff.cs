@@ -26,6 +26,12 @@ public abstract class TimedBuff {
 		if (duration <= 0) {
 			if (name == "InfinityBuff") {
 				TimedInfinityBuff.counter--;
+			} else if (name == "SpeedBuff") {
+				TimedSpeedBuff.counter--;
+			} else if (name == "JumpBuff") {
+				TimedJumpBuff.counter--;
+			} else if (name == "RapidfireBuff") {
+				TimedRapidfireBuff.counter--;
 			}
 			End ();
 		}

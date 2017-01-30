@@ -6,7 +6,7 @@ public class InfinityBuff: ScriptableBuff
 {
 	public float speedIncrease;
 	public float jumpIncreases;
-	public float shotDelayReduces;
+	public int shotDelayReductionFactor;
 	public GameObject infinityBeam;
 	public GameObject defaultBeam;
 	public string name;

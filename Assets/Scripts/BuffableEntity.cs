@@ -32,4 +32,11 @@ public class BuffableEntity: MonoBehaviour {
 		CurrentBuffs.Add(buff);
 		buff.Activate();
 	}
+
+	public static void RemoveBuffs () {
+		foreach(TimedBuff buff in CurrentBuffs.ToArray())
+		{
+			CurrentBuffs.Remove(buff);
+		} 
+	}
 }

@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013856222576}
   - 212: {fileID: 212000013560871124}
-  - 114: {fileID: 114000012174578912}
+  - 114: {fileID: 114000012500516450}
   m_Layer: 0
   m_Name: FireParticle-Yellow
   m_TagString: Untagged
@@ -102,22 +102,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010950187814}
   m_RootOrder: 0
---- !u!114 &114000012174578912
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013458742618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa8f2293b3872fa4c8ed356135c3cad6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinVelocity: {x: 0, y: 0}
-  MaxVelocity: {x: 0, y: 0}
-  LifeSpan: 0.2
-  DestroysSelf: 0
-  AlphaFalloff: 1
 --- !u!114 &114000012466697446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,12 +110,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013535339118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa8f2293b3872fa4c8ed356135c3cad6, type: 3}
+  m_Script: {fileID: 11500000, guid: 52ed62c4800d08e488509d19cb00c549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinVelocity: {x: -0.01, y: 0.05}
-  MaxVelocity: {x: 0.01, y: 0.5}
+  MinVelocity: {x: -0.05, y: 0.1}
+  MaxVelocity: {x: 0.05, y: 0.2}
   LifeSpan: 0.5
+  DestroysSelf: 1
+  AlphaFalloff: 1
+--- !u!114 &114000012500516450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013458742618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ed62c4800d08e488509d19cb00c549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinVelocity: {x: -0.05, y: 0.1}
+  MaxVelocity: {x: 0.05, y: 0.2}
+  LifeSpan: 0.2
   DestroysSelf: 1
   AlphaFalloff: 1
 --- !u!212 &212000010057017534

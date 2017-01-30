@@ -14,6 +14,7 @@ public class LevelManager : MonoBehaviour {
 	public int crystalsToPick;
 	public static int crystalsPicked;
 	public static int crystalsToPick_;
+	public static bool allCrystalsPicked;
 
 	private PlayerController player;
 	private Camera2D camera;
@@ -22,6 +23,7 @@ public class LevelManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		allCrystalsPicked = false;
 		crystalsPicked = 0;
 		crystalsToPick_ = crystalsToPick;
 		player = FindObjectOfType<PlayerController> ();
@@ -31,7 +33,10 @@ public class LevelManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if ((crystalsPicked == crystalsToPick_) || crystalsToPick == 0) {
+			allCrystalsPicked = true;
+			Debug.Log ("All crystals have been collected!");
+		}
 	}
 
 	public void RespawnPlayer () {
@@ -46,6 +51,11 @@ public class LevelManager : MonoBehaviour {
 		player.GetComponent<BoxCollider2D> ().enabled = false;
 		camera.isFollowing = false;
 		AudioManager.Main.PlayNewSound ("player_dead");
+		TimedSpeedBuff.counter = 0;
+		TimedInfinityBuff.counter = 0;
+		TimedJumpBuff.counter = 0;
+		TimedRapidfireBuff.counter = 0;
+		BuffableEntity.RemoveBuffs ();
 		Instantiate (deathParticles, player.transform.position, player.transform.rotation);
 		ScoreManager.AddPoints (-pointPenaltyOnDeath);
 		yield return new WaitForSeconds (respawnDelay);
@@ -58,19 +68,16 @@ public class LevelManager : MonoBehaviour {
 		player.shootingObjet = defaultBeam;
 		player.jumpHeight = defaultJumpHeight;
 		player.fireParticleEffect.SetActive (false);
+		player.speedParticleEffect.SetActive (false);
+		player.jumpParticleEffect.SetActive (false);
+		player.rapidfireParticleEffect.SetActive (false);
 		player.GetComponent<Renderer>().enabled = true;
 		player.GetComponent<CircleCollider2D> ().enabled = true;
 		player.GetComponent<BoxCollider2D> ().enabled = true;
 		camera.isFollowing = true;
 	}
 
-	public static void CrystalPicked () {
+	public static void PickCrystal () {
 		crystalsPicked++;
-		Debug.Log ("Picked: "+crystalsPicked);
-		if (crystalsPicked == crystalsToPick_) {
-			Debug.Log ("Picked all");
-		}
-
 	}
-
 }

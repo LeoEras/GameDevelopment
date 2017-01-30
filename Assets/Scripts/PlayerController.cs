@@ -17,7 +17,10 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask whatIsGround;
 	private bool grounded;
 
+	public GameObject jumpParticleEffect;
+	public GameObject speedParticleEffect;
 	public GameObject fireParticleEffect;
+	public GameObject rapidfireParticleEffect;
 	public GameObject shootingObjet;
 	public GameObject defaultBeam;
 	public Transform firePoint;
@@ -35,19 +38,19 @@ public class PlayerController : MonoBehaviour {
 	private bool enableShooting;
 	private bool enableMoving;
 
-	private bool debuffingInfinity;
-
 	private Rigidbody2D rb;
 	private Animator anim;
 
 	public InfinityBuff infinityBuff;
+	public SpeedBuff speedBuff;
+	public JumpBuff jumpBuff;
+	public RapidfireBuff rapidfireBuff;
 	private BuffableEntity buffable;
 
 	void Awake () {
 		invinsible = false;
 		enableShooting = true;
 		enableMoving = true;
-		debuffingInfinity = false;
 		rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
 	}
@@ -56,7 +59,9 @@ public class PlayerController : MonoBehaviour {
 		buffable = FindObjectOfType<BuffableEntity> ();
 		levelManager = FindObjectOfType<LevelManager> ();
 		fireParticleEffect.SetActive (false);
-
+		speedParticleEffect.SetActive (false);
+		jumpParticleEffect.SetActive (false);
+		rapidfireParticleEffect.SetActive (false);
 	}
 
 	void FixedUpdate () {
@@ -68,12 +73,28 @@ public class PlayerController : MonoBehaviour {
 		if (Time.timeScale == 1f) {
 			anim.SetBool ("Grounded", grounded);
 
-			if (Input.GetKeyDown (KeyCode.G))
+			if (Input.GetKeyDown (KeyCode.Alpha4))
 			{
-				TimedInfinityBuff tif = (TimedInfinityBuff)infinityBuff.InitializeBuff (this);
-				buffable.AddBuff (tif);
-				/*TimedInfinityBuff buff = (TimedInfinityBuff)infinityBuff.InitializeBuff (this);
-				buff.Activate ();*/
+				TimedInfinityBuff infBuff = (TimedInfinityBuff)infinityBuff.InitializeBuff (this);
+				buffable.AddBuff (infBuff);
+			}
+
+			if (Input.GetKeyDown (KeyCode.Alpha1))
+			{
+				TimedSpeedBuff spdBuff = (TimedSpeedBuff)speedBuff.InitializeBuff (this);
+				buffable.AddBuff (spdBuff);
+			}
+
+			if (Input.GetKeyDown (KeyCode.Alpha2))
+			{
+				TimedJumpBuff jmpBuff = (TimedJumpBuff)jumpBuff.InitializeBuff (this);
+				buffable.AddBuff (jmpBuff);
+			}
+
+			if (Input.GetKeyDown (KeyCode.Alpha3))
+			{
+				TimedRapidfireBuff rpfbuff = (TimedRapidfireBuff)rapidfireBuff.InitializeBuff (this);
+				buffable.AddBuff (rpfbuff);
 			}
 
 			if (Input.GetKeyDown (KeyCode.Space) && grounded)

@@ -9,6 +9,8 @@ public class TimedInfinityBuff : TimedBuff
 
 	private PlayerController movementComponent;
 
+	private float shotDelayReduction;
+
 	public TimedInfinityBuff(float duration, ScriptableBuff buff, PlayerController obj, string name) : base(duration, buff, obj, name)
 	{
 		movementComponent = obj.GetComponent<PlayerController> ();
@@ -18,9 +20,10 @@ public class TimedInfinityBuff : TimedBuff
 	public override void Activate()
 	{
 		InfinityBuff infinityBuff = (InfinityBuff) buff;
-		movementComponent.moveSpeed = infinityBuff.speedIncrease;
-		movementComponent.jumpHeight = infinityBuff.jumpIncreases;
-		movementComponent.shotDelay = infinityBuff.shotDelayReduces;
+		movementComponent.moveSpeed += infinityBuff.speedIncrease;
+		movementComponent.jumpHeight += infinityBuff.jumpIncreases;
+		shotDelayReduction = movementComponent.shotDelay / infinityBuff.shotDelayReductionFactor;
+		movementComponent.shotDelay -= shotDelayReduction;
 		movementComponent.shootingObjet = infinityBuff.infinityBeam;
 		movementComponent.fireParticleEffect.SetActive (true);
 		counter++;
@@ -28,10 +31,11 @@ public class TimedInfinityBuff : TimedBuff
 
 	public override void End()
 	{
+		InfinityBuff infinityBuff = (InfinityBuff) buff;
+		movementComponent.moveSpeed -= infinityBuff.speedIncrease;
+		movementComponent.jumpHeight -= infinityBuff.jumpIncreases;
+		movementComponent.shotDelay += shotDelayReduction;
 		if (counter == 0) {
-			movementComponent.moveSpeed = movementComponent.defaultMoveSpeed;
-			movementComponent.jumpHeight = movementComponent.defaultJumpHeight;
-			movementComponent.shotDelay = movementComponent.defaultShotDelay;
 			movementComponent.shootingObjet = movementComponent.defaultBeam;
 			movementComponent.fireParticleEffect.SetActive (false);
 		}

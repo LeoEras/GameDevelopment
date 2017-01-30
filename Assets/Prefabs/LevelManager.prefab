@@ -33,8 +33,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013082367120}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3809193, y: -1.2933476, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.7618387, y: -2.5866952, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -61,5 +61,5 @@ MonoBehaviour:
   defaultShotDelay: 0.2
   respawnDelay: 2
   pointPenaltyOnDeath: 50
-  crystalsToPick: 10
+  crystalsToPick: 3
   healthManager: {fileID: 0}

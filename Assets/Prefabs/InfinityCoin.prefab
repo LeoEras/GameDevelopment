@@ -147,12 +147,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010864746618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1465d491728644a864ec780a90c54c, type: 3}
+  m_Script: {fileID: 11500000, guid: de2ca4da8aa853143ac8a2e58fa3c731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ParticlePrefab: {fileID: 1000013535339118, guid: 11f65caf6538db840b74a3038053250f,
     type: 2}
-  Rate: 500
+  Rate: 50
 --- !u!114 &114000014179401508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -161,13 +161,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011061201044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a367b1c5eca850e40aa4b9e27b0c795c, type: 3}
+  m_Script: {fileID: 11500000, guid: 568f6aeb27b481848a72037b903e3876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infinityBeam: {fileID: 1000011151744698, guid: c15429e0a127b1e48b6c9fa225d4cc35,
-    type: 2}
-  buffDuration: 10
-  infinityBuff: {fileID: 11400000, guid: d3f0b2aa85828004f99bfbe92f99ba03, type: 2}
+  infinityBuff: {fileID: 11400000, guid: 85d283067f2ae0643942d593d0419bdd, type: 2}
 --- !u!212 &212000012487188946
 SpriteRenderer:
   m_ObjectHideFlags: 1
