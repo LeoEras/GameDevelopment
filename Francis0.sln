@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{F264DEDA-075D-1B5C-C31A-93E0C5A5A871}") = "Francis0", "Assembly-CSharp-firstpass.csproj", "{0076F4B2-7AB3-8227-47FF-42517CD34D4F}"
+EndProject
 Project("{F264DEDA-075D-1B5C-C31A-93E0C5A5A871}") = "Francis0", "Assembly-CSharp.csproj", "{6FE27D35-5F1C-009E-6581-BDA4E45108D4}"
 EndProject
 Global
@@ -9,6 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0076F4B2-7AB3-8227-47FF-42517CD34D4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0076F4B2-7AB3-8227-47FF-42517CD34D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0076F4B2-7AB3-8227-47FF-42517CD34D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0076F4B2-7AB3-8227-47FF-42517CD34D4F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6FE27D35-5F1C-009E-6581-BDA4E45108D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6FE27D35-5F1C-009E-6581-BDA4E45108D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FE27D35-5F1C-009E-6581-BDA4E45108D4}.Release|Any CPU.ActiveCfg = Release|Any CPU

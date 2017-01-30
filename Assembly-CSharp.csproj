@@ -45,19 +45,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CameraBehaviour.cs" />
-     <Compile Include="Assets\ClockBehaviourScript.cs" />
-     <Compile Include="Assets\OptionsController.cs" />
-     <Compile Include="Assets\Peluche_controller.cs" />
-     <Compile Include="Assets\PlayerController.cs" />
-     <Compile Include="Assets\PropLayerBehaviour.cs" />
-     <Compile Include="Assets\WallBehaviour.cs" />
+     <Compile Include="Assets\Scripts\CameraBehaviour.cs" />
+     <Compile Include="Assets\Scripts\ClockBehaviourScript.cs" />
+     <Compile Include="Assets\Scripts\Lives.cs" />
+     <Compile Include="Assets\Scripts\OptionsController.cs" />
+     <Compile Include="Assets\Scripts\PauseHandler.cs" />
+     <Compile Include="Assets\Scripts\Peluche_controller.cs" />
+     <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PropLayerBehaviour.cs" />
+     <Compile Include="Assets\Scripts\RotateAround.cs" />
+     <Compile Include="Assets\Scripts\WallBehaviour.cs" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{0076F4B2-7AB3-8227-47FF-42517CD34D4F}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
