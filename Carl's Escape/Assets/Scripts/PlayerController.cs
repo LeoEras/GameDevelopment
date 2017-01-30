@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
 	public Vector2 lastMove;
 	private Rigidbody2D myRB;
 	private static bool playerExists;
+	public string startPoint;
 
 	// Use this for initialization
 	void Start () {
