@@ -10,33 +10,38 @@ public class LifeManager : MonoBehaviour {
 	public PlayerController player;
 	public string mainMenu;
 	public float gameOverTimeOut;
+	private AudioSource[] allMusic;
+	private bool playedGOMusic;
 
 	private 
 
 	// Use this for initialization
 	void Start () {
+		allMusic = FindObjectsOfType<AudioSource> ();
+		playedGOMusic = false;
 		theText = GetComponent<Text> ();
 		player = FindObjectOfType<PlayerController> ();
 		lifeCounter = PlayerPrefs.GetInt("PlayerLives");
-
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (lifeCounter < 0) {
+			if (allMusic.Length > 0) {
+				for (int i = 0; i < allMusic.Length; i++) {
+					allMusic [i].Stop ();
+				}
+			}
 			gameOverScreen.SetActive (true);
 			player.gameObject.SetActive (false);
+			if (!playedGOMusic) {
+				AudioManager.Main.PlayNewSound ("Game Over 1");
+				playedGOMusic = true;
+			}
+
 		}
 
 		theText.text = "x "+ lifeCounter.ToString();
-
-		if (gameOverScreen.activeSelf) {
-			gameOverTimeOut -= Time.deltaTime;
-		}
-
-		if (gameOverTimeOut < 0) {
-			Application.LoadLevel (mainMenu);
-		}
 	}
 
 	public void GiveLife () {

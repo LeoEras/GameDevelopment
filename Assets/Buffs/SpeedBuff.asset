@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa53b00ceb3b37743bf30d052c3781f5, type: 3}
   m_Name: SpeedBuff
   m_EditorClassIdentifier: 
-  Duration: 5
+  Duration: 10
   speedIncrease: 2.5
   name: SpeedBuff

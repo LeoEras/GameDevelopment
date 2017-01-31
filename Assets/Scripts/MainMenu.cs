@@ -8,6 +8,10 @@ public class MainMenu : MonoBehaviour {
 	public int playerLives;
 	public int playerHealth;
 
+	void Start () {
+		AudioListener.volume = 1.0f;
+	}
+
 	public void NewGame () {
 		PlayerPrefs.SetInt ("PlayerLives", playerLives);
 		PlayerPrefs.SetInt ("PlayerScore", 0);

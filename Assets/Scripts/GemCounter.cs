@@ -16,5 +16,9 @@ public class GemCounter : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		theText.text = LevelManager.crystalsPicked +" / "+ LevelManager.crystalsToPick_;
+
+		if (LevelManager.crystalsPicked == LevelManager.crystalsToPick_) {
+			theText.color = Color.red;
+		}
 	}
 }
