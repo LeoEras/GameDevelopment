@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - EnemyProjectile
+  - RespawnCollectible
   layers:
   - Default
   - TransparentFX
@@ -23,7 +25,7 @@ TagManager:
   - Collectibles
   - TriggerZones
   - Enemies
-  - 
+  - EnemyProjectile
   - 
   - 
   - 
@@ -58,6 +60,12 @@ TagManager:
   - name: Projectiles
     uniqueID: 855845641
     locked: 0
+  - name: Enemies
+    uniqueID: 2373349315
+    locked: 0
   - name: Collectibles
     uniqueID: 2513788185
+    locked: 0
+  - name: EnemyProjectile
+    uniqueID: 1106008917
     locked: 0

@@ -22,12 +22,22 @@ public class InfinityCoinPickup : MonoBehaviour {
 		if (other.GetComponent<PlayerController> () == null)
 			return;
 		AudioManager.Main.PlayNewSound ("coin");
-		// Disable item
+		StartCoroutine ("DestroyOrRespawn");
+		ApplyBuff ();
+	}
+
+	IEnumerator DestroyOrRespawn () {
 		gameObject.GetComponent<Renderer>().enabled = false;
 		gameObject.GetComponentInChildren<FireParticleEffect>().enabled = false;
 		gameObject.GetComponent<CircleCollider2D> ().enabled = false;
 		gameObject.GetComponentInChildren<PolygonCollider2D>().enabled = false;
-		ApplyBuff ();
+		if (gameObject.tag == "RespawnCollectible") {
+			yield return new WaitForSeconds (infinityBuff.Duration);
+			gameObject.GetComponent<Renderer>().enabled = true;
+			gameObject.GetComponentInChildren<FireParticleEffect>().enabled = true;
+			gameObject.GetComponent<CircleCollider2D> ().enabled = true;
+			gameObject.GetComponentInChildren<PolygonCollider2D>().enabled = true;
+		}
 	}
 
 	public void ApplyBuff () {

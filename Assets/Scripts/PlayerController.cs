@@ -179,6 +179,28 @@ public class PlayerController : MonoBehaviour {
 				StartCoroutine (ResetInvulnerability());
 			}
 		}
+		if (other.tag == "EnemyProjectile") {
+			var projectile = other.GetComponent<EnemyBeam> ();
+			if (!invinsible) {
+				anim.SetBool ("Hurt", true);
+				AudioManager.Main.PlayNewSound ("player_hurt");
+				HealthManager.InflictDamage (projectile.damage);
+				Destroy (other.gameObject);
+				knockbackCount = knockbackLength;
+
+				if (transform.position.x < other.transform.position.x) {
+					knockFromRight = true;
+				} else {
+					knockFromRight = false;
+				}
+				invinsible = true;
+				enableShooting = false;
+				float time = Time.time;
+				StartCoroutine (DoBlinks(0.1f));
+				StartCoroutine (EnableShooting());
+				StartCoroutine (ResetInvulnerability());
+			}
+		}
 	}
 
 	IEnumerator EnableShooting () {
