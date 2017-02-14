@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2eea32069a981c4a93cde1d0da69d6c, type: 3}
   m_Name: JumpBuff
   m_EditorClassIdentifier: 
-  Duration: 10
+  Duration: 5
   jumpIncreases: 3
   name: JumpBuff

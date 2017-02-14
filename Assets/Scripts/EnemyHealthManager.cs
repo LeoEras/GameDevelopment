@@ -24,6 +24,7 @@ public class EnemyHealthManager : MonoBehaviour {
 			var randomItem = DropRandomItem ();
 
 			if (randomItem < items.Length && randomItem > -1) {
+				Debug.Log (items [randomItem]);
 				Instantiate (items[randomItem], transform.position, Quaternion.identity);
 			}
 		}

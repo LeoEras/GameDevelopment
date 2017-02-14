@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f4f24ac3584b942b430d5ce3e4b054, type: 3}
   m_Name: RapidfireBuff
   m_EditorClassIdentifier: 
-  Duration: 10
+  Duration: 5
   shotDelayReductionFactor: 3
   name: RapidfireBuff

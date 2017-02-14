@@ -12,8 +12,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Stage2.unity
   - enabled: 1
-    path: Assets/Levels/StageSelectNEW.unity
-  - enabled: 1
     path: Assets/Levels/StageSelect.unity
   - enabled: 1
     path: Assets/Levels/GameOver.unity
+  - enabled: 1
+    path: Assets/Levels/StageClear.unity

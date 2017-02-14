@@ -15,6 +15,7 @@ public class LevelManager : MonoBehaviour {
 	public static int crystalsPicked;
 	public static int crystalsToPick_;
 	public static bool allCrystalsPicked;
+	public string levelName;
 
 	private PlayerController player;
 	private Camera2D camera;
@@ -23,6 +24,7 @@ public class LevelManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		PlayerPrefs.SetString ("CurrentLevel", levelName);
 		allCrystalsPicked = false;
 		crystalsPicked = 0;
 		crystalsToPick_ = crystalsToPick;
@@ -55,6 +57,7 @@ public class LevelManager : MonoBehaviour {
 		TimedInfinityBuff.counter = 0;
 		TimedJumpBuff.counter = 0;
 		TimedRapidfireBuff.counter = 0;
+		TimedPoisonDebuff.counter = 0;
 		BuffableEntity.RemoveBuffs ();
 		Instantiate (deathParticles, player.transform.position, player.transform.rotation);
 		ScoreManager.AddPoints (-pointPenaltyOnDeath);
@@ -71,6 +74,7 @@ public class LevelManager : MonoBehaviour {
 		player.speedParticleEffect.SetActive (false);
 		player.jumpParticleEffect.SetActive (false);
 		player.rapidfireParticleEffect.SetActive (false);
+		player.GetComponent<SpriteRenderer>().color = new Color (1f, 1f, 1f);
 		player.GetComponent<Renderer>().enabled = true;
 		player.GetComponent<CircleCollider2D> ().enabled = true;
 		player.GetComponent<BoxCollider2D> ().enabled = true;

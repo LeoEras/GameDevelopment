@@ -28,15 +28,11 @@ public class RapidfireBuffPickup : MonoBehaviour {
 
 	IEnumerator DestroyOrRespawn () {
 		gameObject.GetComponent<Renderer>().enabled = false;
-		gameObject.GetComponentInChildren<FireParticleEffect>().enabled = false;
 		gameObject.GetComponent<CircleCollider2D> ().enabled = false;
-		gameObject.GetComponentInChildren<PolygonCollider2D>().enabled = false;
 		if (gameObject.tag == "RespawnCollectible") {
 			yield return new WaitForSeconds (rapidfireBuff.Duration);
 			gameObject.GetComponent<Renderer>().enabled = true;
-			gameObject.GetComponentInChildren<FireParticleEffect>().enabled = true;
 			gameObject.GetComponent<CircleCollider2D> ().enabled = true;
-			gameObject.GetComponentInChildren<PolygonCollider2D>().enabled = true;
 		}
 	}
 

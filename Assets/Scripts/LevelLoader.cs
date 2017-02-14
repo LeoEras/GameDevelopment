@@ -5,6 +5,7 @@ public class LevelLoader : MonoBehaviour {
 
 	private bool playerInZone;
 	public string levelToLoad;
+	public string levelToUnlock;
 
 	// Use this for initialization
 	void Start () {
@@ -14,6 +15,7 @@ public class LevelLoader : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.W) && playerInZone && LevelManager.allCrystalsPicked) {
+			PlayerPrefs.SetInt (levelToUnlock, 1);
 			Application.LoadLevel (levelToLoad);
 		}
 	}

@@ -36,7 +36,7 @@ public class HealthManager : MonoBehaviour {
 		float playerHealthFloat = playerHealth;
 		float maxHealthFloat = maxHealth;
 		float health = playerHealthFloat / maxHealthFloat;
-		Debug.Log ("Current Health: "+health+" / Max Health: "+maxHealth+" / Player Health: "+playerHealth);
+		//Debug.Log ("Current Health: "+health+" / Max Health: "+maxHealth+" / Player Health: "+playerHealth);
 		healthBar.fillAmount = health;
 		//text.text = playerHealth.ToString();
 	}

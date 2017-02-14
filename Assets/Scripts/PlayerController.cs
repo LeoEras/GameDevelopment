@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
+	private LifeManager lifeManager;
 	private LevelManager levelManager;
 
 	public float moveSpeed;
@@ -45,6 +46,10 @@ public class PlayerController : MonoBehaviour {
 	public SpeedBuff speedBuff;
 	public JumpBuff jumpBuff;
 	public RapidfireBuff rapidfireBuff;
+	public PoisonDebuff poisonDebuff;
+	public RapidfireBuff infiniteRapidfireBuff;
+	public SpeedBuff infiniteSpeedBuff;
+	public JumpBuff infiniteJumpBuff;
 	private BuffableEntity buffable;
 
 	void Awake () {
@@ -57,6 +62,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		buffable = FindObjectOfType<BuffableEntity> ();
+		lifeManager = FindObjectOfType<LifeManager> ();
 		levelManager = FindObjectOfType<LevelManager> ();
 		fireParticleEffect.SetActive (false);
 		speedParticleEffect.SetActive (false);
@@ -95,6 +101,42 @@ public class PlayerController : MonoBehaviour {
 			{
 				TimedRapidfireBuff rpfbuff = (TimedRapidfireBuff)rapidfireBuff.InitializeBuff (this);
 				buffable.AddBuff (rpfbuff);
+			}
+
+			if (Input.GetKeyDown (KeyCode.Alpha5))
+			{
+				TimedPoisonDebuff poiDebuff = (TimedPoisonDebuff)poisonDebuff.InitializeBuff (this);
+				buffable.AddBuff (poiDebuff);
+			}
+
+			if (Input.GetKeyDown (KeyCode.Q))
+			{
+				HealthManager.InflictDamage (-20);
+			}
+
+			if (Input.GetKeyDown (KeyCode.E))
+			{
+				lifeManager.GiveLife ();
+			}
+
+			if (Input.GetKeyDown (KeyCode.R))
+			{
+				lifeManager.TakeLife ();
+			}
+
+			if (Input.GetKeyDown (KeyCode.Z))
+			{
+				TimedJumpBuff infJump = (TimedJumpBuff)infiniteJumpBuff.InitializeBuff (this);
+				buffable.AddBuff (infJump);
+				buffable.AddBuff (infJump);
+				TimedSpeedBuff infSpeed = (TimedSpeedBuff)infiniteSpeedBuff.InitializeBuff (this);
+				buffable.AddBuff (infSpeed);
+				buffable.AddBuff (infSpeed);
+				buffable.AddBuff (infSpeed);
+				TimedRapidfireBuff infFire = (TimedRapidfireBuff)infiniteRapidfireBuff.InitializeBuff (this);
+				buffable.AddBuff (infFire);
+				buffable.AddBuff (infFire);
+				buffable.AddBuff (infFire);
 			}
 
 			if (Input.GetKeyDown (KeyCode.Space) && grounded)

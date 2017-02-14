@@ -32,8 +32,15 @@ public abstract class TimedBuff {
 				TimedJumpBuff.counter--;
 			} else if (name == "RapidfireBuff") {
 				TimedRapidfireBuff.counter--;
+			} else if (name == "PoisonDebuff") {
+				TimedPoisonDebuff.counter--;
 			}
 			End ();
+		} else {
+			if (name == "PoisonDebuff") {
+				PoisonDebuff poison = new PoisonDebuff();
+				HealthManager.InflictDamage (1);
+			}
 		}
 	}
 

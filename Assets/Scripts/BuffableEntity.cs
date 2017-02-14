@@ -18,7 +18,6 @@ public class BuffableEntity: MonoBehaviour {
 
 		foreach(TimedBuff buff in CurrentBuffs.ToArray())
 		{
-			//Debug.Log ("abc");
 			buff.Tick(Time.deltaTime);
 			if (buff.IsFinished)
 			{
