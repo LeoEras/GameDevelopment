@@ -10,6 +10,11 @@ public class PlayerController : MonoBehaviour {
 	private Rigidbody2D myRB;
 	private static bool playerExists;
 	public string startPoint;
+	private bool doorFound;
+	private GameObject door;
+	private bool attacking;
+	public float attackTime;
+	private float attackTimeCount;
 
 	// Use this for initialization
 	void Start () {
@@ -31,15 +36,39 @@ public class PlayerController : MonoBehaviour {
 		float moveVertical = Input.GetAxisRaw("Vertical");
 		playerMoving = false;
 
-		if (moveHorizontal != 0 || moveVertical != 0) {
-			//Vector3 movement = new Vector3 (moveHorizontal, moveVertical, 0);
-			myRB.velocity = new Vector2 (moveHorizontal, moveVertical) * moveSpeed;
-			//transform.Translate (movement * moveSpeed * Time.deltaTime);
+		if(!attacking){
+			if (moveHorizontal != 0 || moveVertical != 0) {
+				//Vector3 movement = new Vector3 (moveHorizontal, moveVertical, 0);
+				myRB.velocity = new Vector2 (moveHorizontal, moveVertical) * moveSpeed;
+				//transform.Translate (movement * moveSpeed * Time.deltaTime);
 
-			playerMoving = true;
-			lastMove = new Vector2 (moveHorizontal, moveVertical);
-		} else {
-			myRB.velocity = new Vector2 (0, 0);
+				playerMoving = true;
+				lastMove = new Vector2 (moveHorizontal, moveVertical);
+			} else {
+				myRB.velocity = new Vector2 (0, 0);
+			}
+
+			if (Input.GetKeyDown (KeyCode.Z)) {
+				if(doorFound){
+					Destroy(door);
+				}
+			}
+
+			if(Input.GetKeyDown(KeyCode.X)){
+				attackTimeCount = attackTime;
+				attacking = true;
+				myRB.velocity = Vector2.zero;
+				anim.SetBool ("Attack", true);
+			}
+		}
+
+		if(attackTimeCount > 0){
+			attackTimeCount -= Time.deltaTime;
+		}
+
+		if (attackTimeCount <= 0) {
+			attacking = false;
+			anim.SetBool ("Attack", false);
 		}
 			
 		anim.SetFloat ("MoveX", moveHorizontal);
@@ -47,5 +76,14 @@ public class PlayerController : MonoBehaviour {
 		anim.SetBool ("PlayerMoving", playerMoving);
 		anim.SetFloat ("LastMoveX", lastMove.x);
 		anim.SetFloat ("LastMoveY", lastMove.y);
+	}
+
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.gameObject.tag == "Door") {
+			door = other.gameObject;
+			doorFound = true;
+		} else {
+			doorFound = false;
+		}
 	}
 }

@@ -46,8 +46,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\DestroyOverTime.cs" />
+     <Compile Include="Assets\Scripts\EnemyHealthManager.cs" />
+     <Compile Include="Assets\Scripts\FloatingNumbers.cs" />
+     <Compile Include="Assets\Scripts\HurtEnemy.cs" />
+     <Compile Include="Assets\Scripts\HurtPlayer.cs" />
      <Compile Include="Assets\Scripts\LoadNewArea.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealthManager.cs" />
      <Compile Include="Assets\Scripts\PlayerStartPoint.cs" />
      <Compile Include="Assets\Scripts\ZombieController.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\ImportBehaviour.cs" />
