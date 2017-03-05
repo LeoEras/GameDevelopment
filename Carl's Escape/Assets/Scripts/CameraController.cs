@@ -22,6 +22,9 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (!followTarget) {
+			followTarget = FindObjectOfType<PlayerController> ().gameObject;
+		}
 		transform.position = followTarget.transform.position + offset;
 	}
 }

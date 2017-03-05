@@ -3,6 +3,7 @@ using System.Collections;
 
 public class HurtPlayer : MonoBehaviour {
 	public int damageToGive;
+	public GameObject damageNumber;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +18,9 @@ public class HurtPlayer : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other){
 		if (other.gameObject.name == "player") {
 			other.gameObject.GetComponent<PlayerHealthManager> ().HurtPlayer (damageToGive);
+
+			var clone = (GameObject) Instantiate (damageNumber, other.transform.position, Quaternion.Euler(Vector3.zero));
+			clone.GetComponent<FloatingNumbers> ().damageNumber = damageToGive;
 		}
 	}
 }

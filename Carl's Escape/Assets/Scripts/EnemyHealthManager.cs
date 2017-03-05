@@ -14,7 +14,7 @@ public class EnemyHealthManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(CurrentHealth <= 0){
-			Destroy (gameObject);
+			Destroy (transform.gameObject);
 		}
 	}
 

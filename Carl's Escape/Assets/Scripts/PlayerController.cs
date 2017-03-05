@@ -15,11 +15,21 @@ public class PlayerController : MonoBehaviour {
 	private bool attacking;
 	public float attackTime;
 	private float attackTimeCount;
+	public bool canMove;
+	public Hashtable keys;
+	public Hashtable weapons;
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
 		myRB = GetComponent<Rigidbody2D> ();
+		canMove = true;
+
+		keys = new Hashtable ();
+		keys.Add (1, "Llave de celda C1");
+
+		weapons = new Hashtable ();
+		weapons.Add (1, "Bate");
 
 		if (!playerExists) {
 			playerExists = true;
@@ -36,22 +46,19 @@ public class PlayerController : MonoBehaviour {
 		float moveVertical = Input.GetAxisRaw("Vertical");
 		playerMoving = false;
 
+		if(!canMove){
+			myRB.velocity = Vector2.zero;
+			return;
+		}
+
 		if(!attacking){
 			if (moveHorizontal != 0 || moveVertical != 0) {
-				//Vector3 movement = new Vector3 (moveHorizontal, moveVertical, 0);
 				myRB.velocity = new Vector2 (moveHorizontal, moveVertical) * moveSpeed;
-				//transform.Translate (movement * moveSpeed * Time.deltaTime);
 
 				playerMoving = true;
 				lastMove = new Vector2 (moveHorizontal, moveVertical);
 			} else {
 				myRB.velocity = new Vector2 (0, 0);
-			}
-
-			if (Input.GetKeyDown (KeyCode.Z)) {
-				if(doorFound){
-					Destroy(door);
-				}
 			}
 
 			if(Input.GetKeyDown(KeyCode.X)){
@@ -77,13 +84,5 @@ public class PlayerController : MonoBehaviour {
 		anim.SetFloat ("LastMoveX", lastMove.x);
 		anim.SetFloat ("LastMoveY", lastMove.y);
 	}
-
-	void OnTriggerEnter2D(Collider2D other){
-		if (other.gameObject.tag == "Door") {
-			door = other.gameObject;
-			doorFound = true;
-		} else {
-			doorFound = false;
-		}
-	}
+		
 }

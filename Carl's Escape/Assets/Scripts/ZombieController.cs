@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class ZombieController : MonoBehaviour {
@@ -15,18 +16,26 @@ public class ZombieController : MonoBehaviour {
 	public float waitToReload;
 	private bool reloading;
 	private GameObject player;
+	public bool canMove;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
+		canMove = true;
 
 		timeBetweenMoveCount = Random.Range(timeBetweenMove * 0.75f, timeBetweenMove * 1.25f);
 		timeToMoveCount = Random.Range(timeToMove * 0.75f, timeBetweenMove * 1.25f);
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if(!canMove){
+			rb.velocity = Vector2.zero;
+			return;
+		}
+
 		if (moving) {
 			timeToMoveCount -= Time.deltaTime;
 			rb.velocity = moveDir;
@@ -51,7 +60,8 @@ public class ZombieController : MonoBehaviour {
 		if (reloading) {
 			waitToReload -= Time.deltaTime;
 			if (waitToReload < 0) {
-				Application.LoadLevel (Application.loadedLevel);
+				//Application.LoadLevel (Application.loadedLevel);
+				SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
 				player.SetActive (true);
 			}
 		}
@@ -63,12 +73,5 @@ public class ZombieController : MonoBehaviour {
 		anim.SetFloat ("LastMoveY", lastMove.y);
 
 	}
-
-	void OnCollisionEnter2D(Collision2D other){
-		/*if (other.gameObject.name == "player") {
-			other.gameObject.SetActive(false);
-			reloading = true;
-			player = other.gameObject;
-		}*/
-	}
+		
 }
