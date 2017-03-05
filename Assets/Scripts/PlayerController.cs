@@ -2,22 +2,25 @@
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
-	public float speed;
 	public Texture heartTexture;
-	public int facing_direction;
-	public int lives;
-	private Animator animator;
 	private int vertical = 0;
 	private int horizontal = 0;
+	private Rigidbody2D rb;	
+	private Animator animator;
+	public int facing_direction;
+	public float speed;
+	public static int lives = 3;
 	private Transform heart1;
 	private Transform heart2;
 	private Transform heart3;
 	public Sprite black_heart;
-	private Rigidbody2D rb;
 	public static bool pause = false;
+	public static Vector3 original_position;
+
 
 	// Use this for initialization
 	void Start(){
+		original_position = this.transform.position;
 		heart1 = this.transform.GetChild (0);
 		heart2 = this.transform.GetChild (1);
 		heart3 = this.transform.GetChild (2);
@@ -26,7 +29,7 @@ public class PlayerController : MonoBehaviour {
 		animator.SetInteger("direction", facing_direction);
 	}
 
-	void Movement(bool pause){
+	void Move(bool pause){
 		if (pause) {
 			Time.timeScale = 0;
 		} else {
@@ -86,9 +89,6 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void LivesHandler(){
-		if(Input.GetKeyDown(KeyCode.Space)){
-			lives--;
-		}
 		switch (lives) {
 		case 2:
 			heart1.GetComponent<SpriteRenderer> ().sprite = black_heart;
@@ -106,9 +106,9 @@ public class PlayerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		Movement (pause);
 		LivesHandler ();
 		Pause ();
+		Move (pause);
 		if (lives == 0) {
 			Debug.Log ("Game over");
 		}

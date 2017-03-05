@@ -7,11 +7,11 @@ public class CameraBehaviour : MonoBehaviour {
 	public float Right_Limit;
 	public float Left_Limit;
 	public bool Enable_Limits;
-	public GameObject player;
+	private GameObject player;
 
 	// Use this for initialization
 	void Start () {
-	
+		player = GameObject.Find ("Player");
 	}
 	
 	// Update is called once per frame

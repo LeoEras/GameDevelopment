@@ -13,13 +13,17 @@ public class OptionsController : MonoBehaviour {
 	public GameObject n_music;
 	public GameObject audio_gameobject;
 	public GameObject n_audio;
+	public GameObject help_text;
 	private int option;
 	private bool music_on = true;
 	private bool audio_on = true;
+	private GameObject ayuda;
+	private bool cont = false;
 
 	// Use this for initialization
 	void Start () {
 		option = 0;
+		ayuda = GameObject.Find ("Ayuda");
 	}
 
 	// Update is called once per frame
@@ -56,6 +60,7 @@ public class OptionsController : MonoBehaviour {
 			exit.transform.position = new Vector3 (-20f, -2.8f, 0f);
 			help.transform.position = new Vector3 (0f, -3.8f, 0f);
 			help_s.transform.position = new Vector3 (-20f, -3.8f, 0f);
+			help_text.transform.position = new Vector3 (0.5f, 20f, 0f);
 			if (Input.GetKeyDown (KeyCode.Return)) {
 				Application.Quit ();
 			}
@@ -65,10 +70,20 @@ public class OptionsController : MonoBehaviour {
 			exit.transform.position = new Vector3 (0f, -2.8f, 0f);
 			help.transform.position = new Vector3 (-20f, -3.8f, 0f);
 			help_s.transform.position = new Vector3 (0f, -3.8f, 0f);
+			if (Input.GetKeyDown (KeyCode.Return)) {
+				cont = !cont;
+				if (cont) {
+					help_text.transform.position = new Vector3 (0.5f, 1.7f, 0f);
+					ayuda.GetComponent<AudioSource> ().Play ();
+				} else {
+					help_text.transform.position = new Vector3 (0.5f, 20f, 0f);
+				}
+			}
 			break;
 		case 3:
 			help.transform.position = new Vector3 (0f, -3.8f, 0f);
 			help_s.transform.position = new Vector3 (-20f, -3.8f, 0f);
+			help_text.transform.position = new Vector3 (0.5f, 20f, 0f);
 			if (Input.GetKeyDown (KeyCode.Return)) {
 				if (music_on) {
 					music.transform.position = new Vector3 (-1f, -10f, 0f);
@@ -86,10 +101,12 @@ public class OptionsController : MonoBehaviour {
 			play_s.transform.position = new Vector3 (-20f, -1.8f, 0f);
 			if (Input.GetKeyDown (KeyCode.Return)) {
 				if (audio_on) {
+					GameObject.Find ("Main Camera").GetComponent<AudioSource>().Pause();
 					audio_gameobject.transform.position = new Vector3 (1f, -10f, 0f);
 					n_audio.transform.position = new Vector3 (1f, -5f, 0f);
 					audio_on = false;
 				} else {
+					GameObject.Find ("Main Camera").GetComponent<AudioSource>().UnPause();
 					audio_gameobject.transform.position = new Vector3 (1f, -5f, 0f);
 					n_audio.transform.position = new Vector3 (1f, -10f, 0f);
 					audio_on = true;

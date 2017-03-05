@@ -22,6 +22,13 @@ public class PauseHandler : MonoBehaviour {
 
 	void PauseGame(){
 		if (Input.GetKeyDown(KeyCode.Escape)){
+			if (pause) {
+				this.GetComponent<AudioSource> ().Stop ();
+				GameObject.Find ("Main Camera").GetComponent<AudioSource>().Play();
+			} else {
+				this.GetComponent<AudioSource> ().Play ();
+				GameObject.Find ("Main Camera").GetComponent<AudioSource>().Pause();
+			}
 			pause = !pause;
 		}
 		if (pause) {
@@ -35,7 +42,6 @@ public class PauseHandler : MonoBehaviour {
 					selectedOptionPause++;
 				}
 			}
-			Debug.Log (selectedOptionPause);
 			switch (selectedOptionPause) {
 			case 0:
 				this.transform.GetChild(1).GetComponent<SpriteRenderer> ().sprite = Main_Menu;
@@ -52,6 +58,7 @@ public class PauseHandler : MonoBehaviour {
 				this.transform.GetChild(2).GetComponent<SpriteRenderer> ().sprite = Continue_Selected;
 				this.transform.GetChild(3).GetComponent<SpriteRenderer> ().sprite = Reload;
 				if (Input.GetKeyDown (KeyCode.Return)) {
+					this.GetComponent<AudioSource> ().Stop ();
 					pause = !pause;
 					PlayerController.pause = false;
 				}
