@@ -19,3 +19,11 @@ C:\Users\Norman\Documents\Francis0\Temp\bin\Debug\UnityEngine.UI.xml
 C:\Users\Norman\Documents\Francis0\Temp\bin\Debug\UnityEngine.Networking.xml
 C:\Users\Norman\Documents\Francis0\obj\Debug\Assembly-CSharp.dll
 C:\Users\Norman\Documents\Francis0\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Norman\Documents\Francis0\Temp\bin\Debug\UnityEngine.Analytics.dll
+C:\Users\Norman\Documents\Francis0\Temp\bin\Debug\UnityEngine.HoloLens.dll
+C:\Users\Norman\Documents\Francis0\Temp\bin\Debug\UnityEngine.PlaymodeTestsRunner.dll
+C:\Users\Norman\Documents\Francis0\Temp\bin\Debug\UnityEngine.VR.dll
+C:\Users\Norman\Documents\Francis0\Temp\bin\Debug\UnityEngine.PlaymodeTestsRunner.xml
+C:\Users\Norman\Documents\Francis0\Temp\bin\Debug\UnityEngine.Analytics.xml
+C:\Users\Norman\Documents\Francis0\Temp\bin\Debug\UnityEngine.HoloLens.xml
+C:\Users\Norman\Documents\Francis0\Temp\bin\Debug\UnityEngine.VR.xml
