@@ -23,8 +23,8 @@ public class DoorManager : MonoBehaviour {
 	void Update () {
 		if(inDialogZone && Input.GetKeyUp(KeyCode.Z)){
 			if (!dMan.dialogActive) {
-				if (player.keys.ContainsValue (llave)) {
-					dialogLines [0] = "Has usado [" + llave + "]";
+				if ( player.items.Contains(llave) ) {
+					dialogLines [0] = "Has usado [ " + llave + " ]";
 					kd.AddDestroyedObject( transform.parent.gameObject );
 					Destroy ( transform.parent.gameObject );
 				} else {

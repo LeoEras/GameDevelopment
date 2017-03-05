@@ -6,13 +6,10 @@ using System.Collections;
 public class DarknessManager : MonoBehaviour {
 	private bool darken, lighten;
 	private Image darkScreen;
-	private float alpha;
+	public float alpha;
 	private float velocity;
-	private float maxAlpha;
-	private string sceneToLoad;
 	private PlayerController player;
 	private NPlayerController nPlayer;
-	private UIManager ui;
 
 	// Use this for initialization
 	void Start () {
@@ -20,18 +17,19 @@ public class DarknessManager : MonoBehaviour {
 		lighten = false;
 		alpha = 0f;
 		darkScreen = GetComponent<Image> ();
-
-		player = FindObjectOfType<PlayerController> ();
-		if(player){
-			player.gameObject.SetActive (false);
-		}
-			
-		nPlayer = FindObjectOfType<NPlayerController> ();
-		ui = FindObjectOfType<UIManager> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (darken) {
+			if (alpha < 1f) {
+				alpha += velocity;
+				darkScreen.color = new Color (darkScreen.color.r, darkScreen.color.g, darkScreen.color.b, alpha);
+			} else {
+				darken = false;
+			}
+		}
 
 		if (lighten) {
 			if (alpha > 0f) {
@@ -40,51 +38,40 @@ public class DarknessManager : MonoBehaviour {
 			} else { 
 				lighten = false;
 
+				player = FindObjectOfType<PlayerController> ();
 				if(player){
 					player.canMove = true;
 				}
 
+				nPlayer = FindObjectOfType<NPlayerController> ();
 				if (nPlayer) {
 					nPlayer.canMove = true;
 				}
 			}
 		}
 
-		if (darken) {
-			if (alpha < maxAlpha) {
-				alpha += velocity;
-				darkScreen.color = new Color (darkScreen.color.r, darkScreen.color.g, darkScreen.color.b, alpha);
-			} else {
-				lighten = true;
-				darken = false;
-
-				if(sceneToLoad != ""){
-					if(player && !player.gameObject.activeSelf){
-						player.gameObject.SetActive (true);
-						ui.healthBar.gameObject.SetActive(true);
-					}
-					SceneManager.LoadScene(sceneToLoad, LoadSceneMode.Single);
-				}
-
-
-			}
-		}
-
 	}
 
-	public void DarkenScreen(float max, float vel, string scene){
+	public void DarkenScreen(float vel){
 		darken = true;
-		maxAlpha = max;
+		lighten = false;
 		velocity = vel;
-		sceneToLoad = scene;
 
+		player = FindObjectOfType<PlayerController> ();
 		if(player){
 			player.canMove = false;
 		}
 
+		nPlayer = FindObjectOfType<NPlayerController> ();
 		if (nPlayer) {
 			nPlayer.canMove = false;
 		}
+	}
+
+	public void LightenScreen(float vel){
+		darken = false;
+		lighten = true;
+		velocity = vel;
 	}
 		
 }

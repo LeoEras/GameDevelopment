@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class SelectOptions : MonoBehaviour {
@@ -24,10 +25,14 @@ public class SelectOptions : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(!nuevoSelected && !controlSelected && dm.alpha>=1f){
+			SceneManager.LoadScene ("PB_0", LoadSceneMode.Single);
+		}
 
 		if(nuevoSelected){
 			if(Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return)){
-				dm.DarkenScreen(1f, 0.01f, "PB_0");
+				//dm.DarkenScreen(1f, 0.01f, "PB_0");
+				dm.DarkenScreen(0.01f);
 				nuevoSelected = false;
 			}
 			if(Input.GetKeyDown(KeyCode.DownArrow)){

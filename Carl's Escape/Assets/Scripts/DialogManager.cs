@@ -10,6 +10,7 @@ public class DialogManager : MonoBehaviour {
 	public int currentLine;
 	private PlayerController player;
 	private NPlayerController nPlayer;
+	public bool finishDialog;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +20,8 @@ public class DialogManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		finishDialog = false;
+
 		if(dialogActive && Input.GetKeyDown(KeyCode.Z)){
 			currentLine ++;
 		}
@@ -26,6 +29,7 @@ public class DialogManager : MonoBehaviour {
 		if (currentLine >= dialogLines.Length) {
 			dBox.SetActive (false);
 			dialogActive = false;
+			finishDialog = true;
 
 			currentLine = 0;
 

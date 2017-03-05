@@ -16,8 +16,8 @@ public class PlayerController : MonoBehaviour {
 	public float attackTime;
 	private float attackTimeCount;
 	public bool canMove;
-	public Hashtable keys;
-	public Hashtable weapons;
+	public ArrayList items;
+	public ArrayList weapons;
 
 	// Use this for initialization
 	void Start () {
@@ -25,11 +25,13 @@ public class PlayerController : MonoBehaviour {
 		myRB = GetComponent<Rigidbody2D> ();
 		canMove = true;
 
-		keys = new Hashtable ();
-		keys.Add (1, "Llave de celda C1");
+		//items = new Hashtable ();
+		items = new ArrayList();
+		items.Add ("Llave de celda C1");
 
-		weapons = new Hashtable ();
-		weapons.Add (1, "Bate");
+		//weapons = new Hashtable ();
+		weapons = new ArrayList();
+		weapons.Add ("Bate");
 
 		if (!playerExists) {
 			playerExists = true;

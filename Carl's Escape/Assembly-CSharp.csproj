@@ -50,9 +50,9 @@
      <Compile Include="Assets\Scripts\DarknessManager.cs" />
      <Compile Include="Assets\Scripts\DestroyOverTime.cs" />
      <Compile Include="Assets\Scripts\DialogHolder.cs" />
-     <Compile Include="Assets\Scripts\DialogHolderLoad.cs" />
      <Compile Include="Assets\Scripts\DialogManager.cs" />
      <Compile Include="Assets\Scripts\DoorManager.cs" />
+     <Compile Include="Assets\Scripts\EndDialogAndLoad.cs" />
      <Compile Include="Assets\Scripts\EnemyHealthManager.cs" />
      <Compile Include="Assets\Scripts\FloatingNumbers.cs" />
      <Compile Include="Assets\Scripts\HurtEnemy.cs" />
@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\KeepDestroyed.cs" />
      <Compile Include="Assets\Scripts\LoadNewArea.cs" />
      <Compile Include="Assets\Scripts\NPlayerController.cs" />
+     <Compile Include="Assets\Scripts\PickItem.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerHealthManager.cs" />
      <Compile Include="Assets\Scripts\PlayerStartPoint.cs" />
