@@ -10,11 +10,13 @@ public class PickItem : MonoBehaviour {
 	public string[] items;
 	public string[] weapons;
 	private GameObject pauseScreen;
+	private SFXManager sfxMan;
 
 	// Use this for initialization
 	void Start () {
 		dMan = FindObjectOfType<DialogManager> ();
 		kd = GetComponent<KeepDestroyed> ();
+		sfxMan = FindObjectOfType<SFXManager> ();
 		pauseScreen = dMan.transform.parent.FindChild("Pause").gameObject;
 	}
 
@@ -32,6 +34,8 @@ public class PickItem : MonoBehaviour {
 					player.weapons.Add(weapon);
 				}
 			}
+
+			sfxMan.pick.Play ();
 
 			kd.AddDestroyedObject(gameObject);
 			Destroy (gameObject);

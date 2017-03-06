@@ -26,5 +26,6 @@ public class CameraController : MonoBehaviour {
 			followTarget = FindObjectOfType<PlayerController> ().gameObject;
 		}
 		transform.position = followTarget.transform.position + offset;
+
 	}
 }

@@ -18,11 +18,13 @@ public class PlayerController : MonoBehaviour {
 	public bool canMove;
 	public ArrayList items;
 	public ArrayList weapons;
+	private SFXManager sfxMan;
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
 		myRB = GetComponent<Rigidbody2D> ();
+		sfxMan = FindObjectOfType<SFXManager> ();
 		canMove = true;
 
 		//items = new Hashtable ();
@@ -68,6 +70,8 @@ public class PlayerController : MonoBehaviour {
 				attacking = true;
 				myRB.velocity = Vector2.zero;
 				anim.SetBool ("Attack", true);
+
+				sfxMan.playerBateAtk.Play ();
 			}
 		}
 

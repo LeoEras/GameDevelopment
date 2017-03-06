@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class PlayerHealthManager : MonoBehaviour {
@@ -8,17 +9,19 @@ public class PlayerHealthManager : MonoBehaviour {
 	public float flashLength;
 	private float flashCounter;
 	private SpriteRenderer playerSprite;
+	private SFXManager sfxMan;
 
 	// Use this for initialization
 	void Start () {
 		playerCurrentHealth = playerMaxHealth;
-
 		playerSprite = GetComponent<SpriteRenderer> ();
+		sfxMan = FindObjectOfType<SFXManager> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(playerCurrentHealth <= 0){
+			sfxMan.playerDead.Play ();
 			gameObject.SetActive (false);
 		}
 
@@ -45,6 +48,8 @@ public class PlayerHealthManager : MonoBehaviour {
 		playerCurrentHealth -= damageToGive;
 		flashActive = true;
 		flashCounter = flashLength;
+
+		sfxMan.playerHurt.Play ();
 	}
 
 	public void SetMaxHealth(){

@@ -13,16 +13,21 @@ public class ZombieController : MonoBehaviour {
 	private float timeToMoveCount;
 	private Vector2 lastMove;
 	private Vector2 moveDir;
-	public float waitToReload;
-	private bool reloading;
 	private GameObject player;
 	public bool canMove;
+	private SFXManager sfxMan;
+	private AudioSource[] zombieSfx;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
+		sfxMan = FindObjectOfType<SFXManager> ();
 		canMove = true;
+
+		zombieSfx = new AudioSource[2];
+		zombieSfx [0] = sfxMan.zombieWalk1;
+		zombieSfx [1] = sfxMan.zombieWalk2;
 
 		timeBetweenMoveCount = Random.Range(timeBetweenMove * 0.75f, timeBetweenMove * 1.25f);
 		timeToMoveCount = Random.Range(timeToMove * 0.75f, timeBetweenMove * 1.25f);
@@ -49,20 +54,13 @@ public class ZombieController : MonoBehaviour {
 			timeBetweenMoveCount -= Time.deltaTime;
 			rb.velocity = Vector2.zero;
 			if (timeBetweenMoveCount < 0) {
+				zombieSfx [Random.Range(0,1)].Play();
+
 				moving = true;
 				timeToMoveCount = Random.Range(timeToMove * 0.75f, timeBetweenMove * 1.25f);
 				float moveHorizontal = Random.Range(-1f,1f);
 				float moveVertical = Random.Range(-1f,1f);
 				moveDir = new Vector2 (moveHorizontal, moveVertical) * moveSpeed;
-			}
-		}
-
-		if (reloading) {
-			waitToReload -= Time.deltaTime;
-			if (waitToReload < 0) {
-				//Application.LoadLevel (Application.loadedLevel);
-				SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
-				player.SetActive (true);
 			}
 		}
 

@@ -10,11 +10,13 @@ public class SelectOptions : MonoBehaviour {
 	private bool nuevoSelected;
 	private bool controlSelected;
 	private DarknessManager dm;
+	private SFXManager sfxMan;
 
 	// Use this for initialization
 	void Start () {
 		nuevoSelected = true;
 		controlSelected = false;
+		sfxMan = FindObjectOfType<SFXManager> ();
 
 		nuevo = transform.FindChild("Nuevo").GetComponent<Text>();
 		controles = transform.FindChild("Controles").GetComponent<Text>();
@@ -31,11 +33,13 @@ public class SelectOptions : MonoBehaviour {
 
 		if(nuevoSelected){
 			if(Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return)){
-				//dm.DarkenScreen(1f, 0.01f, "PB_0");
+				sfxMan.BossDeadEff.Play ();
 				dm.DarkenScreen(0.01f);
 				nuevoSelected = false;
 			}
 			if(Input.GetKeyDown(KeyCode.DownArrow)){
+				sfxMan.select.Play ();
+
 				nuevoSelected = false;
 				controlSelected = true;
 
@@ -52,12 +56,15 @@ public class SelectOptions : MonoBehaviour {
 		if(controlSelected){
 			if(Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return)){
 				if (!controlScreen.activeSelf) {
+					sfxMan.playerHurt.Play ();
 					controlScreen.SetActive (true);
 				} else {
 					controlScreen.SetActive (false);
 				}
 			}
 			if(Input.GetKeyDown(KeyCode.UpArrow) && !controlScreen.activeSelf){
+				sfxMan.select.Play ();
+
 				nuevoSelected = true;
 				controlSelected = false;
 

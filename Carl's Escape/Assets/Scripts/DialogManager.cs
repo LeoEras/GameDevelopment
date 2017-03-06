@@ -12,12 +12,14 @@ public class DialogManager : MonoBehaviour {
 	private NPlayerController nPlayer;
 	private GameObject pauseScreen;
 	public bool finishDialog;
+	private SFXManager sfxMan;
 
 	// Use this for initialization
 	void Start () {
 		player = FindObjectOfType<PlayerController> ();
 		nPlayer = FindObjectOfType<NPlayerController> ();
 		pauseScreen = transform.parent.FindChild("Pause").gameObject;
+		sfxMan = FindObjectOfType<SFXManager> ();
 
 		ShowDialog ();
 	}
@@ -27,6 +29,7 @@ public class DialogManager : MonoBehaviour {
 		finishDialog = false;
 
 		if(dialogActive && Input.GetKeyDown(KeyCode.Z) && !pauseScreen.activeSelf){
+			sfxMan.select.Play ();
 			currentLine ++;
 		}
 

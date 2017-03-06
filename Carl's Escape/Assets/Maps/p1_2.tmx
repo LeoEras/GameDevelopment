@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="left-down" width="20" height="20" tilewidth="16" tileheight="16" nextobjectid="18">
+<map version="1.0" orientation="orthogonal" renderorder="left-down" width="20" height="20" tilewidth="16" tileheight="16" nextobjectid="38">
  <properties>
   <property name="unity:scale" type="float" value="0.0625"/>
  </properties>
@@ -20,6 +20,18 @@
  </tileset>
  <tileset firstgid="4257" name="mvtileseticonsscifi1" tilewidth="16" tileheight="16" tilecount="704" columns="32">
   <image source="../Sprites/elements/mvtileseticonsscifi1.png" width="512" height="352"/>
+ </tileset>
+ <tileset firstgid="4961" name="fd864d4887041a291e9888774441ad4e" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../Sprites/elements/fd864d4887041a291e9888774441ad4e.png" trans="000000" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="5985" name="police_station_by_nicnubill-d9892fb (1)" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../Sprites/elements/police_station_by_nicnubill-d9892fb (1).png" trans="000000" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="7009" name="tilee" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../Sprites/elements/tilee.png" trans="000000" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="8033" name="police_station_by_nicnubill-d9892fb (1)" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../Sprites/elements/police_station_by_nicnubill-d9892fb (1).png" trans="000000" width="512" height="512"/>
  </tileset>
  <layer name="piso" width="20" height="20">
   <properties>
@@ -80,24 +92,24 @@
    <property name="unity:sortingLayerName" value="Objects"/>
   </properties>
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,7341,7342,0,0,0,0,7155,7156,2147485668,2147485667,2019,2020,0,0,
+0,0,5737,5738,5739,5740,7373,7374,0,0,0,0,7187,7188,2147485700,2147485699,2051,2052,0,0,
+0,0,5769,5770,5771,5772,0,0,0,0,0,0,2473,2474,2147485732,2147485731,2083,2084,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,2505,2506,2147485764,2147485763,2115,2116,0,0,
+0,0,0,0,0,0,2469,2470,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,2501,2502,0,0,0,0,0,2684362193,2684362161,0,7487,7488,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,2684362194,2684362162,0,7519,7520,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,7928,7929,0,7551,7552,0,0,
+0,0,6441,6442,0,0,0,0,0,0,0,0,0,0,0,0,7583,7584,0,0,
+0,0,6473,6474,0,0,0,0,0,0,0,0,0,0,0,6563,6564,0,0,0,
+0,0,7161,7162,0,0,0,0,0,0,0,0,0,0,0,6595,6596,0,0,0,
+0,0,7193,7194,0,0,2684362488,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,6625,6626,0,0,2684362489,0,0,0,2469,2470,0,0,0,0,7547,7548,0,0,
+0,0,6657,6658,0,0,0,0,0,0,2501,2502,0,0,0,0,7579,7580,0,0,
+0,0,6265,6266,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,6297,6298,0,0,0,0,0,0,0,0,0,0,0,0,1449,1450,0,0,
+0,0,6329,6330,0,7803,7804,0,0,0,0,0,7601,7602,0,0,1481,1482,0,0,
+0,0,6361,6362,0,7835,7836,0,0,0,0,0,7633,7634,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
@@ -137,5 +149,17 @@
   <object id="15" x="288.5" y="16" width="15.5" height="287"/>
   <object id="16" x="180.5" y="289" width="123.5" height="30"/>
   <object id="17" x="17" y="289" width="121" height="30.5"/>
+  <object id="24" x="29" y="16" width="67" height="25.5"/>
+  <object id="25" x="224" y="16" width="64" height="48"/>
+  <object id="26" x="260" y="84" width="28" height="59.5"/>
+  <object id="27" x="248" y="144" width="16" height="32"/>
+  <object id="28" x="260" y="240" width="24" height="28"/>
+  <object id="29" x="32" y="224" width="32" height="60"/>
+  <object id="30" x="88" y="264" width="20" height="24"/>
+  <object id="31" x="40" y="196" width="16" height="24"/>
+  <object id="33" x="36" y="128" width="20" height="28"/>
+  <object id="35" x="123" y="-14" width="72" height="15"/>
+  <object id="36" x="-15" y="46" width="14" height="50"/>
+  <object id="37" x="123" y="320" width="71.5" height="11"/>
  </objectgroup>
 </map>

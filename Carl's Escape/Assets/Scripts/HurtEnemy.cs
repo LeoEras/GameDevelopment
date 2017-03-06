@@ -18,8 +18,13 @@ public class HurtEnemy : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		if(other.gameObject.tag == "Enemy"){
-			other.gameObject.GetComponent<EnemyHealthManager> ().HurtEnemy (damageToGive);
+		if(other.gameObject.tag == "Enemy" || other.gameObject.tag == "Boss"){
+			if (other.gameObject.tag == "Enemy") {
+				other.gameObject.GetComponent<EnemyHealthManager> ().HurtEnemy (damageToGive);
+			} else {
+				other.gameObject.GetComponent<BossHealthManager> ().HurtEnemy (damageToGive);
+			}
+
 			Instantiate (strikeBurst, hitPoint.position, hitPoint.rotation);
 			var clone = (GameObject) Instantiate (damageNumber, hitPoint.position, Quaternion.Euler(Vector3.zero));
 			clone.GetComponent<FloatingNumbers> ().damageNumber = damageToGive;
