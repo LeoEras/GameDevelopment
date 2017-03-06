@@ -50,7 +50,7 @@ public class OptionsController : MonoBehaviour {
 			play.transform.position = new Vector3 (-20f, -1.8f, 0f);
 			play_s.transform.position = new Vector3 (0f, -1.8f, 0f);
 			if (Input.GetKeyDown (KeyCode.Return)) {
-				SceneManager.LoadScene ("Level1");
+				SceneManager.LoadScene ("L1");
 			}
 			break;
 		case 1:

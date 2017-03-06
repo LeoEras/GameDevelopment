@@ -32,7 +32,7 @@ public class WinController : MonoBehaviour {
 		switch (selectedOptionPause) {
 		case 0:
 			if (Input.GetKeyDown (KeyCode.Return)) {
-				SceneManager.LoadScene ("Level1");
+				SceneManager.LoadScene ("L2");
 				PlayerController.lives = 3;
 				PlayerController.pause = false;
 				PlayerController.score = 0;
