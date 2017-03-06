@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour {
 	public static int lives = 3;
 	public static bool pause = false;
 	public static Vector3 original_position;
-	public static int score = 0;
+	public static int score = 4;
 
 
 	// Use this for initialization

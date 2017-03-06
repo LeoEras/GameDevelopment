@@ -13,7 +13,7 @@ public class LayerBehaviour : MonoBehaviour {
 	void Update () {
 		if (child) {
 			GetComponent<SpriteRenderer> ().sortingOrder = 
-				this.transform.parent.gameObject.GetComponent<SpriteRenderer> ().sortingOrder;
+				this.transform.parent.gameObject.GetComponent<SpriteRenderer> ().sortingOrder + 1;
 		} else {
 			GetComponent<SpriteRenderer> ().sortingOrder = 
 				Mathf.RoundToInt ((transform.position.y + offset) * -10f);

@@ -50,6 +50,11 @@ public class CanvasController : MonoBehaviour {
 		} else {
 			TimeLeft.GetComponent<Text> ().text = minutes.ToString() + ":" + seconds.ToString();	
 		}
+
+		if (minutes == 0 && seconds == 30) {
+			GameObject.Find ("Time").GetComponent<AudioSource> ().Play ();
+		}
+
 		if(timeleft < 0){
 			PlayerController.lives = 0;
 			hidden = true;
