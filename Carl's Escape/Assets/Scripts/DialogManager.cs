@@ -10,19 +10,23 @@ public class DialogManager : MonoBehaviour {
 	public int currentLine;
 	private PlayerController player;
 	private NPlayerController nPlayer;
+	private GameObject pauseScreen;
 	public bool finishDialog;
 
 	// Use this for initialization
 	void Start () {
 		player = FindObjectOfType<PlayerController> ();
 		nPlayer = FindObjectOfType<NPlayerController> ();
+		pauseScreen = transform.parent.FindChild("Pause").gameObject;
+
+		ShowDialog ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		finishDialog = false;
 
-		if(dialogActive && Input.GetKeyDown(KeyCode.Z)){
+		if(dialogActive && Input.GetKeyDown(KeyCode.Z) && !pauseScreen.activeSelf){
 			currentLine ++;
 		}
 

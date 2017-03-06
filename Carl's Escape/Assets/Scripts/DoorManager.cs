@@ -10,6 +10,7 @@ public class DoorManager : MonoBehaviour {
 	private bool inDialogZone;
 	public string[] dialogLines;
 	private KeepDestroyed kd;
+	private GameObject pauseScreen;
 
 	// Use this for initialization
 	void Start () {
@@ -17,11 +18,12 @@ public class DoorManager : MonoBehaviour {
 		aMan = FindObjectOfType<ActionManager> ();
 		player = FindObjectOfType<PlayerController> ();
 		kd = FindObjectOfType<KeepDestroyed> ();
+		pauseScreen = dMan.transform.parent.FindChild("Pause").gameObject;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if(inDialogZone && Input.GetKeyUp(KeyCode.Z)){
+		if(inDialogZone && Input.GetKeyUp(KeyCode.Z) && !pauseScreen.activeSelf){
 			if (!dMan.dialogActive) {
 				if ( player.items.Contains(llave) ) {
 					dialogLines [0] = "Has usado [ " + llave + " ]";

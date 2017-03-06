@@ -7,16 +7,18 @@ public class DialogHolder : MonoBehaviour {
 	private ActionManager aMan;
 	private bool inDialogZone;
 	public string[] dialogLines;
+	private GameObject pauseScreen;
 
 	// Use this for initialization
 	void Start () {
 		dMan = FindObjectOfType<DialogManager> ();
 		aMan = FindObjectOfType<ActionManager> ();
+		pauseScreen = dMan.transform.parent.FindChild("Pause").gameObject;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(inDialogZone && Input.GetKeyUp(KeyCode.Z)){
+		if(inDialogZone && Input.GetKeyUp(KeyCode.Z) && !pauseScreen.activeSelf){
 			if (!dMan.dialogActive) {
 				inDialogZone = false;
 				dMan.dialogLines = dialogLines;

@@ -9,11 +9,13 @@ public class PickItem : MonoBehaviour {
 	private PlayerController player;
 	public string[] items;
 	public string[] weapons;
+	private GameObject pauseScreen;
 
 	// Use this for initialization
 	void Start () {
 		dMan = FindObjectOfType<DialogManager> ();
 		kd = GetComponent<KeepDestroyed> ();
+		pauseScreen = dMan.transform.parent.FindChild("Pause").gameObject;
 	}
 
 	// Update is called once per frame

@@ -11,7 +11,7 @@ public class EndDialogAndLoad : MonoBehaviour {
 	private NPlayerController nPlayer;
 	private PickItem pickZone;
 	private UIManager ui;
-	private bool inPickZone, isDark, isLight, done;
+	private bool inPickZone, isDark, done;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +25,7 @@ public class EndDialogAndLoad : MonoBehaviour {
 		}
 
 		ui = FindObjectOfType<UIManager> ();
+
 	}
 	
 	// Update is called once per frame
@@ -36,7 +37,7 @@ public class EndDialogAndLoad : MonoBehaviour {
 			}
 		}
 
-		if(dm.alpha >= 1f && !isLight){
+		if(dm.alpha >= 1f && isDark){
 			if(sceneToLoad != ""){
 				if(player && !player.gameObject.activeSelf){
 					player.gameObject.SetActive (true);
@@ -46,7 +47,7 @@ public class EndDialogAndLoad : MonoBehaviour {
 			}
 
 			dm.LightenScreen(0.05f);
-			isLight = true;
+			isDark = false;
 			done = true;
 		}
 

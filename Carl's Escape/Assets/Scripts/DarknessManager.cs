@@ -15,8 +15,8 @@ public class DarknessManager : MonoBehaviour {
 	void Start () {
 		darken = false;
 		lighten = false;
-		alpha = 0f;
 		darkScreen = GetComponent<Image> ();
+		alpha = darkScreen.color.a;
 	}
 	
 	// Update is called once per frame
