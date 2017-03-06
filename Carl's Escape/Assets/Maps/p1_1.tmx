@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="left-down" width="20" height="20" tilewidth="16" tileheight="16" nextobjectid="21">
+<map version="1.0" orientation="orthogonal" renderorder="left-down" width="20" height="20" tilewidth="16" tileheight="16" nextobjectid="33">
  <properties>
   <property name="unity:scale" type="float" value="0.0625"/>
  </properties>
@@ -20,6 +20,24 @@
  </tileset>
  <tileset firstgid="4257" name="mvtileseticonsscifi1" tilewidth="16" tileheight="16" tilecount="704" columns="32">
   <image source="../Sprites/elements/mvtileseticonsscifi1.png" width="512" height="352"/>
+ </tileset>
+ <tileset firstgid="4961" name="fd864d4887041a291e9888774441ad4e" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../../../../../juegos/fd864d4887041a291e9888774441ad4e.png" trans="000000" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="5985" name="charti13" tilewidth="16" tileheight="16" tilecount="384" columns="24">
+  <image source="../../../../../juegos/charti13.png" trans="000000" width="384" height="256"/>
+ </tileset>
+ <tileset firstgid="6369" name="HospitalAddon_zps5efa098f" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../../../../../juegos/HospitalAddon_zps5efa098f.png" trans="000000" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="7393" name="Hospital_zpsdc84223d" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../../../../../juegos/Hospital_zpsdc84223d.png" trans="000000" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="8417" name="tile_c10.png-par- Ludovic2100" tilewidth="16" tileheight="16" tilecount="961" columns="31">
+  <image source="../../../../../juegos/tile_c10.png-par- Ludovic2100.png" trans="000000" width="500" height="500"/>
+ </tileset>
+ <tileset firstgid="9378" name="Sayako_TileC" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="../../../../../juegos/elements/Sayako_TileC.png" trans="000000" width="512" height="512"/>
  </tileset>
  <layer name="piso" width="20" height="20">
   <properties>
@@ -80,24 +98,24 @@
    <property name="unity:sortingLayerName" value="Objects"/>
   </properties>
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,1761,1762,1763,1764,0,0,0,0,0,0,0,0,993,994,1003,1004,0,0,
+0,0,1793,1794,1795,1796,0,0,0,0,0,0,0,0,1025,1026,1035,1036,0,0,
+0,0,1825,1826,1827,1828,0,0,0,0,0,0,2147493703,2147493702,1057,1058,1067,1068,0,0,
+0,0,1857,1858,1859,1860,0,0,0,0,0,2147493703,2147493735,2147493734,1089,1090,1099,1100,0,0,
+0,0,0,0,0,0,0,0,0,0,0,2147493735,2147493767,2147493766,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,3758106503,3758106471,3758106439,0,0,0,0,0,0,
+0,0,0,0,0,10054,10055,0,0,0,0,3758106502,3758106470,3758106438,0,0,0,0,0,0,
+0,0,1610621156,1610621187,0,10086,10087,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,1610621155,1610621186,0,10118,10119,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,1610621154,1610621185,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,1610621153,1610621184,0,0,0,0,0,2147493703,2147493702,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,2147493735,2147493734,0,0,0,1787,1788,1789,1790,0,0,
+0,0,0,0,0,0,0,0,0,2147493767,2147493766,0,0,0,1819,1820,1821,1822,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,1851,1852,1853,1854,0,0,
+0,0,0,0,0,0,0,0,0,0,0,7157,7158,7159,7160,1884,1885,1886,0,0,
+0,0,0,0,0,0,0,0,0,7541,7542,7189,7190,7191,7192,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,7573,7574,7221,7222,7223,7224,0,1083,1084,0,0,
+0,0,0,0,0,0,0,0,0,0,0,7253,7254,7255,7256,0,1115,1116,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
@@ -141,5 +159,11 @@
   </object>
   <object id="18" x="128" y="24.5" width="7" height="27.5"/>
   <object id="19" x="185" y="24" width="6" height="28"/>
+  <object id="24" x="32" y="112" width="36" height="64"/>
+  <object id="26" x="228" y="176" width="56" height="56"/>
+  <object id="27" x="152" y="244" width="20" height="24"/>
+  <object id="28" x="180" y="232" width="112" height="56"/>
+  <object id="29" x="224" y="8" width="64" height="52"/>
+  <object id="30" x="36" y="8" width="60" height="52"/>
  </objectgroup>
 </map>
