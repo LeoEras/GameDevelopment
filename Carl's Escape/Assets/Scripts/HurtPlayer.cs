@@ -16,7 +16,7 @@ public class HurtPlayer : MonoBehaviour {
 		playerHealth = FindObjectOfType<PlayerHealthManager> ();
 		mc = FindObjectOfType<MusicManager> ();
 
-		previewsTrack = mc.currentTrack;
+		//previewsTrack = mc.currentTrack;
 	}
 
 	// Update is called once per frame
@@ -29,7 +29,7 @@ public class HurtPlayer : MonoBehaviour {
 			waitToReload -= Time.deltaTime;
 			if (waitToReload < 0) {
 				reloading = false;
-				mc.SwitchTrack (previewsTrack);
+				//mc.SwitchTrack (previewsTrack);
 				playerHealth.playerCurrentHealth = playerHealth.playerMaxHealth;
 				playerHealth.gameObject.SetActive (true);
 				SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);

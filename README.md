@@ -5,7 +5,7 @@ Repositorio para proyectos de Desarrollo de Videojuegos
 
 **Grupo:** 3
 
-**Proyecto:** Carl's Escape
+**Proyecto:** Undead Rising
 
 **Integrantes:**
 
