@@ -21,6 +21,7 @@ public class PlayerHealthManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(playerCurrentHealth <= 0){
+			playerCurrentHealth = 0;
 			sfxMan.playerDead.Play ();
 			gameObject.SetActive (false);
 		}
