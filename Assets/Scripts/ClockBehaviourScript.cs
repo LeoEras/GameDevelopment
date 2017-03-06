@@ -8,6 +8,7 @@ public class ClockBehaviourScript : MonoBehaviour {
 	public Sprite Off;
 	public LayerMask player;
 	private Vector2 initial_position;
+	private bool enabled = true;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,11 @@ public class ClockBehaviourScript : MonoBehaviour {
 		hit = Physics2D.Linecast(start.transform.position, end.transform.position, player);
 		if (hit.collider != null) {
 			if (hit.collider.name == "Player") {
+				if (enabled) {
+					this.GetComponent<AudioSource> ().Play ();
+					PlayerController.score = PlayerController.score + 1;
+					enabled = false;
+				}
 				GetComponent<SpriteRenderer> ().sprite = Off;
 				this.transform.position = new Vector3 (
 					initial_position.x - 0.073f,

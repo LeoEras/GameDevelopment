@@ -46,11 +46,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CanvasController.cs" />
      <Compile Include="Assets\Scripts\CameraBehaviour.cs" />
      <Compile Include="Assets\Scripts\ClockBehaviourScript.cs" />
+     <Compile Include="Assets\Scripts\Follower.cs" />
+     <Compile Include="Assets\Scripts\GameOverController.cs" />
      <Compile Include="Assets\Scripts\GuardBehaviour.cs" />
      <Compile Include="Assets\Scripts\LayerBehaviour.cs" />
      <Compile Include="Assets\Scripts\Lives.cs" />
+     <Compile Include="Assets\Scripts\Minimap.cs" />
      <Compile Include="Assets\Scripts\OptionsController.cs" />
      <Compile Include="Assets\Scripts\PauseHandler.cs" />
      <Compile Include="Assets\Scripts\Peluche_controller.cs" />
@@ -58,6 +62,7 @@
      <Compile Include="Assets\Scripts\RotateAround.cs" />
      <Compile Include="Assets\Scripts\SoundController.cs" />
      <Compile Include="Assets\Scripts\WallBehaviour.cs" />
+     <Compile Include="Assets\Scripts\WinController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

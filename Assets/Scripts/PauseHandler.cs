@@ -84,6 +84,8 @@ public class PauseHandler : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		PauseGame ();
+		if (PlayerController.lives > 0) {
+			PauseGame ();
+		}
 	}
 }
