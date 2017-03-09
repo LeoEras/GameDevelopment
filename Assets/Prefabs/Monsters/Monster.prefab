@@ -86,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011887622540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.13, y: -1.775, z: 0}
+  m_LocalPosition: {x: 9.15, y: -3.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -212,7 +212,7 @@ MonoBehaviour:
   deathEffect: {fileID: 1000011699851130, guid: 07546694ba88bfc4a9c81ec911e68281,
     type: 2}
   items:
-  - {fileID: 1000011834834730, guid: 23fee64e6bcb8534baf8c9f289300b7d, type: 2}
+  - {fileID: 1000013147629706, guid: 5b6eaae56f141524aae80a07cc0492ff, type: 2}
   - {fileID: 1000010704637312, guid: ea8d909321fc5db408b0cff697553c34, type: 2}
   - {fileID: 1000011340752854, guid: 8263def6bfaa578448fdc418a1354ff3, type: 2}
   itemDropRates: 010000000f000000190000003b000000

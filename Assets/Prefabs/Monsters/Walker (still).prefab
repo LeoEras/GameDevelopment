@@ -231,7 +231,7 @@ MonoBehaviour:
   deathEffect: {fileID: 1000011442803814, guid: d7cb906c3d0a5344e9947aecb77549d8,
     type: 2}
   items:
-  - {fileID: 1000011834834730, guid: 23fee64e6bcb8534baf8c9f289300b7d, type: 2}
+  - {fileID: 1000013147629706, guid: 5b6eaae56f141524aae80a07cc0492ff, type: 2}
   - {fileID: 1000010704637312, guid: b3f96aa99c3954a4d895b19d118be78b, type: 2}
   - {fileID: 1000010704637312, guid: ea8d909321fc5db408b0cff697553c34, type: 2}
   - {fileID: 1000011340752854, guid: 8263def6bfaa578448fdc418a1354ff3, type: 2}

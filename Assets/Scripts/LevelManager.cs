@@ -16,6 +16,11 @@ public class LevelManager : MonoBehaviour {
 	public static int crystalsToPick_;
 	public static bool allCrystalsPicked;
 	public string levelName;
+	public GameObject[] backgroundImages;
+	public static GameObject[] images;
+	private static float initialRed;
+	private static float initialGreen;
+	private static float initialBlue;
 
 	private PlayerController player;
 	private Camera2D camera;
@@ -24,6 +29,16 @@ public class LevelManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		initialRed = 0.25f;
+		initialGreen = 0f;
+		initialBlue = 0.55f;
+
+		for (int i = 0; i < backgroundImages.Length; i++) {
+			for(int j = 0; j < backgroundImages[i].transform.childCount; j++){
+				backgroundImages [i].transform.GetChild(j).GetComponent<SpriteRenderer> ().color = new Color (initialRed, initialGreen, initialBlue);	
+			}
+		}
+		images = backgroundImages;
 		PlayerPrefs.SetString ("CurrentLevel", levelName);
 		allCrystalsPicked = false;
 		crystalsPicked = 0;
@@ -37,7 +52,6 @@ public class LevelManager : MonoBehaviour {
 	void Update () {
 		if ((crystalsPicked == crystalsToPick_) || crystalsToPick == 0) {
 			allCrystalsPicked = true;
-			Debug.Log ("All crystals have been collected!");
 		}
 	}
 
@@ -83,5 +97,15 @@ public class LevelManager : MonoBehaviour {
 
 	public static void PickCrystal () {
 		crystalsPicked++;
+		for (int i = 0; i < images.Length; i++) {
+			for(int j = 0; j < images[i].transform.childCount; j++){
+				float tintFactor = ((float)crystalsPicked / (float)crystalsToPick_);
+				float redFactor = (1 - initialRed) * tintFactor;
+				float greenFactor = (1 - initialGreen) * tintFactor;
+				float blueFactor = (1 - initialBlue) * tintFactor;
+				Color newColor = new Color(initialRed + redFactor, initialGreen + greenFactor, initialBlue + blueFactor);
+				images [i].transform.GetChild(j).GetComponent<SpriteRenderer> ().color = newColor;
+			}
+		}
 	}
 }

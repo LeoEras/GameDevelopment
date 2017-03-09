@@ -5,6 +5,8 @@ public class ScrollingBackgroundScript : MonoBehaviour {
 	public bool scrolling, parallax;
 	public float backgroundSize;
 	public float parallaxSpeed;
+	public float yIndex;
+	public float zIndex;
 
 	private Transform cameraTransform;
 	private Transform[] layers;
@@ -28,6 +30,7 @@ public class ScrollingBackgroundScript : MonoBehaviour {
 	private void ScrollLeft () {
 		int lastRight = rightIndex;
 		layers [rightIndex].position = Vector3.right * (layers [leftIndex].position.x - backgroundSize);
+		layers [rightIndex].position = new Vector3 (layers [rightIndex].position.x, yIndex, zIndex);
 		leftIndex = rightIndex;
 		rightIndex--;
 		if (rightIndex < 0) {
@@ -38,6 +41,7 @@ public class ScrollingBackgroundScript : MonoBehaviour {
 	private void ScrollRight () {
 		int lastLeft = leftIndex;
 		layers [leftIndex].position = Vector3.right * (layers [rightIndex].position.x + backgroundSize);
+		layers [leftIndex].position = new Vector3 (layers [leftIndex].position.x, yIndex, zIndex);
 		rightIndex = leftIndex;
 		leftIndex++;
 		if (leftIndex == layers.Length) {
@@ -50,6 +54,7 @@ public class ScrollingBackgroundScript : MonoBehaviour {
 		if (parallax) {
 			float deltaX = cameraTransform.position.x - lastCameraX;
 			transform.position += Vector3.right * (deltaX * parallaxSpeed);
+			transform.position = new Vector3(transform.position.x, yIndex, zIndex);
 		}
 
 		lastCameraX = cameraTransform.position.x;

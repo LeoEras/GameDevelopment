@@ -13,7 +13,7 @@ public class EnemyBeam : MonoBehaviour {
 	public float activeTime;
 
 	void Awake () {
-		if (enemyName == "Boss 1") {
+		if (enemyName == "Boss 1" || enemyName == "SuperBoss") {
 			AudioManager.Main.PlayNewSound ("boss_beam");
 		}
 	}

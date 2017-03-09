@@ -520,7 +520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ParticlePrefab: {fileID: 1000013535339118, guid: 6ab40ccde3e40004686d08efbf212f5b,
     type: 2}
-  Rate: 50
+  Rate: 150
 --- !u!114 &114000010735334292
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -534,7 +534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ParticlePrefab: {fileID: 1000013535339118, guid: 4acdb92a486db364292b53df15fce3a2,
     type: 2}
-  Rate: 50
+  Rate: 150
 --- !u!114 &114000011908716656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -548,7 +548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ParticlePrefab: {fileID: 1000013535339118, guid: 11f65caf6538db840b74a3038053250f,
     type: 2}
-  Rate: 50
+  Rate: 150
 --- !u!114 &114000012290330364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -631,7 +631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ParticlePrefab: {fileID: 1000013535339118, guid: 54ab5fc224334954c91e9f2a0dde1cd9,
     type: 2}
-  Rate: 50
+  Rate: 150
 --- !u!212 &212000012884162766
 SpriteRenderer:
   m_ObjectHideFlags: 1

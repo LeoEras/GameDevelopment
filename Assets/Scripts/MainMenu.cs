@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour {
 	public void NewGame () {
 		PlayerPrefs.SetInt ("Stage1", 1);
 		PlayerPrefs.SetInt ("Stage2", 0);
+		PlayerPrefs.SetInt ("Stage3", 0);
 		PlayerPrefs.SetInt ("PlayerLives", playerLives);
 		PlayerPrefs.SetInt ("PlayerScore", 0);
 		PlayerPrefs.SetInt ("PlayerMaxHealth", playerHealth);

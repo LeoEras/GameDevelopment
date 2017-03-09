@@ -51,6 +51,8 @@ public class PlayerController : MonoBehaviour {
 	public SpeedBuff infiniteSpeedBuff;
 	public JumpBuff infiniteJumpBuff;
 	private BuffableEntity buffable;
+	private EnemyBeam enemyBeam;
+	private EnemyBeamFollow enemyBeamFollow;
 
 	void Awake () {
 		invinsible = false;
@@ -79,66 +81,6 @@ public class PlayerController : MonoBehaviour {
 		if (Time.timeScale == 1f) {
 			anim.SetBool ("Grounded", grounded);
 
-			if (Input.GetKeyDown (KeyCode.Alpha4))
-			{
-				TimedInfinityBuff infBuff = (TimedInfinityBuff)infinityBuff.InitializeBuff (this);
-				buffable.AddBuff (infBuff);
-			}
-
-			if (Input.GetKeyDown (KeyCode.Alpha1))
-			{
-				TimedSpeedBuff spdBuff = (TimedSpeedBuff)speedBuff.InitializeBuff (this);
-				buffable.AddBuff (spdBuff);
-			}
-
-			if (Input.GetKeyDown (KeyCode.Alpha2))
-			{
-				TimedJumpBuff jmpBuff = (TimedJumpBuff)jumpBuff.InitializeBuff (this);
-				buffable.AddBuff (jmpBuff);
-			}
-
-			if (Input.GetKeyDown (KeyCode.Alpha3))
-			{
-				TimedRapidfireBuff rpfbuff = (TimedRapidfireBuff)rapidfireBuff.InitializeBuff (this);
-				buffable.AddBuff (rpfbuff);
-			}
-
-			if (Input.GetKeyDown (KeyCode.Alpha5))
-			{
-				TimedPoisonDebuff poiDebuff = (TimedPoisonDebuff)poisonDebuff.InitializeBuff (this);
-				buffable.AddBuff (poiDebuff);
-			}
-
-			if (Input.GetKeyDown (KeyCode.Q))
-			{
-				HealthManager.InflictDamage (-20);
-			}
-
-			if (Input.GetKeyDown (KeyCode.E))
-			{
-				lifeManager.GiveLife ();
-			}
-
-			if (Input.GetKeyDown (KeyCode.R))
-			{
-				lifeManager.TakeLife ();
-			}
-
-			if (Input.GetKeyDown (KeyCode.Z))
-			{
-				TimedJumpBuff infJump = (TimedJumpBuff)infiniteJumpBuff.InitializeBuff (this);
-				buffable.AddBuff (infJump);
-				buffable.AddBuff (infJump);
-				TimedSpeedBuff infSpeed = (TimedSpeedBuff)infiniteSpeedBuff.InitializeBuff (this);
-				buffable.AddBuff (infSpeed);
-				buffable.AddBuff (infSpeed);
-				buffable.AddBuff (infSpeed);
-				TimedRapidfireBuff infFire = (TimedRapidfireBuff)infiniteRapidfireBuff.InitializeBuff (this);
-				buffable.AddBuff (infFire);
-				buffable.AddBuff (infFire);
-				buffable.AddBuff (infFire);
-			}
-
 			if (Input.GetKeyDown (KeyCode.Space) && grounded)
 			{
 				rb.velocity = new Vector2(rb.velocity.x, jumpHeight); 
@@ -147,18 +89,18 @@ public class PlayerController : MonoBehaviour {
 
 			moveVelocity = 0f;
 
-			if (Input.GetKey(KeyCode.D))
-			{
-				//rb.velocity = new Vector2(moveSpeed, rb.velocity.y); 
-				anim.SetBool ("Hurt", false);
-				moveVelocity = moveSpeed;
-			}
-
 			if (Input.GetKey(KeyCode.A))
 			{
 				//rb.velocity = new Vector2(-moveSpeed, rb.velocity.y); 
 				anim.SetBool ("Hurt", false);
 				moveVelocity = -moveSpeed;
+			}
+
+			if (Input.GetKey(KeyCode.D))
+			{
+				//rb.velocity = new Vector2(-moveSpeed, rb.velocity.y); 
+				anim.SetBool ("Hurt", false);
+				moveVelocity = moveSpeed;
 			}
 
 			if (knockbackCount <= 0) {
@@ -222,26 +164,51 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 		if (other.tag == "EnemyProjectile") {
-			var projectile = other.GetComponent<EnemyBeam> ();
-			if (!invinsible) {
-				anim.SetBool ("Hurt", true);
-				AudioManager.Main.PlayNewSound ("player_hurt");
-				HealthManager.InflictDamage (projectile.damage);
-				Destroy (other.gameObject);
-				knockbackCount = knockbackLength;
+			Debug.Log (other.name);
+			if (other.name == "SuperBossBeam 1(Clone)") {
+				var projectile = other.GetComponent<EnemyBeamFollow> ();
+				if (!invinsible) {
+					anim.SetBool ("Hurt", true);
+					AudioManager.Main.PlayNewSound ("player_hurt");
+					HealthManager.InflictDamage (projectile.damage);
+					Destroy (other.gameObject);
+					knockbackCount = knockbackLength;
 
-				if (transform.position.x < other.transform.position.x) {
-					knockFromRight = true;
-				} else {
-					knockFromRight = false;
+					if (transform.position.x < other.transform.position.x) {
+						knockFromRight = true;
+					} else {
+						knockFromRight = false;
+					}
+					invinsible = true;
+					enableShooting = false;
+					float time = Time.time;
+					StartCoroutine (DoBlinks (0.1f));
+					StartCoroutine (EnableShooting ());
+					StartCoroutine (ResetInvulnerability ());
 				}
-				invinsible = true;
-				enableShooting = false;
-				float time = Time.time;
-				StartCoroutine (DoBlinks(0.1f));
-				StartCoroutine (EnableShooting());
-				StartCoroutine (ResetInvulnerability());
+			} else {
+				var projectile = other.GetComponent<EnemyBeam> ();
+				if (!invinsible) {
+					anim.SetBool ("Hurt", true);
+					AudioManager.Main.PlayNewSound ("player_hurt");
+					HealthManager.InflictDamage (projectile.damage);
+					Destroy (other.gameObject);
+					knockbackCount = knockbackLength;
+
+					if (transform.position.x < other.transform.position.x) {
+						knockFromRight = true;
+					} else {
+						knockFromRight = false;
+					}
+					invinsible = true;
+					enableShooting = false;
+					float time = Time.time;
+					StartCoroutine (DoBlinks(0.1f));
+					StartCoroutine (EnableShooting());
+					StartCoroutine (ResetInvulnerability());
+				}
 			}
+
 		}
 	}
 
